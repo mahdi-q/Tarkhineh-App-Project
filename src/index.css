@@ -1,0 +1,155 @@
+@import url("/fonts.css");
+
+/* Tailwind Configs */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Variables */
+
+@layer base {
+  :root {
+    &,
+    &.light-mode {
+      --color-tint-100: 229, 242, 233;
+      --color-tint-200: 202, 228, 211;
+      --color-tint-300: 176, 215, 189;
+      --color-tint-400: 150, 201, 167;
+      --color-tint-500: 124, 188, 145;
+      --color-tint-600: 97, 174, 123;
+      --color-tint-700: 78, 153, 104;
+
+      --color-primary: 65, 127, 86;
+
+      --color-shade-100: 57, 111, 75;
+      --color-shade-200: 49, 95, 65;
+      --color-shade-300: 41, 79, 54;
+      --color-shade-400: 33, 64, 43;
+      --color-shade-500: 24, 48, 32;
+      --color-shade-600: 8, 16, 11;
+
+      --color-white: 255, 255, 255;
+
+      --color-gray-100: 249, 249, 249;
+      --color-gray-200: 237, 237, 237;
+      --color-gray-300: 225, 225, 225;
+      --color-gray-400: 203, 203, 203;
+      --color-gray-500: 173, 173, 173;
+      --color-gray-600: 117, 117, 117;
+      --color-gray-700: 113, 113, 113;
+      --color-gray-800: 53, 53, 53;
+
+      --color-black: 12, 12, 12;
+
+      --color-error-100: 255, 242, 242;
+      --color-error-200: 237, 46, 46;
+      --color-error-300: 195, 0, 0;
+
+      --color-success-100: 243, 253, 250;
+      --color-success-200: 0, 186, 136;
+      --color-success-300: 0, 150, 109;
+
+      --color-warning-100: 255, 248, 225;
+      --color-warning-200: 244, 183, 64;
+      --color-warning-300: 169, 121, 28;
+    }
+    &.dark-mode {
+      --color-white: 12, 12, 12;
+
+      --color-gray-100: 53, 53, 53;
+      --color-gray-200: 113, 113, 113;
+      --color-gray-300: 117, 117, 117;
+      --color-gray-400: 173, 173, 173;
+      --color-gray-500: 203, 203, 203;
+      --color-gray-600: 225, 225, 225;
+      --color-gray-500: 237, 237, 237;
+      --color-gray-800: 249, 249, 249;
+
+      --color-black: 255, 255, 255;
+    }
+  }
+}
+
+/* Reset Styles */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: "Estedad";
+  min-height: 100vh;
+  user-select: none;
+  background-color: rgb(var(--background-app-rgb));
+}
+
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+label {
+  display: block;
+}
+
+/* Inupt Number */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Scroll Bar */
+
+/* For webkit browsers (chrome , safari) */
+@supports (-webkit-appearance: none) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--color-primary-800));
+    border-radius: 50px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(var(--color-secondary-300));
+    border-radius: 50px;
+  }
+}
+
+/* For Firefox browser */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--color-primary-800))
+      rgb(var(--color-secondary-300));
+  }
+}
+
+/* smooth scrolling */
+html,
+body {
+  scroll-behavior: smooth;
+}
