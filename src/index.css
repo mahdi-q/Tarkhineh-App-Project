@@ -85,6 +85,14 @@
   scroll-behavior: smooth;
 }
 
+/* Classes */
+
+@layer components {
+  .icon {
+    @apply h-5 w-5 md:h-6 md:w-6;
+  }
+}
+
 html,
 body {
   font-family: "Estedad";
