@@ -14,7 +14,7 @@ function NavbarLinks() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   return (
-    <ul className="flex min-w-64 flex-col gap-y-3 md:flex-row md:items-center md:gap-x-4 lg:gap-x-6">
+    <ul className="flex min-w-64 flex-col gap-y-3 px-4 md:flex-row md:items-center md:gap-x-4 md:px-0 lg:gap-x-6">
       <li className={navbarLinkClass}>
         <CustomNavLink to="/">
           <GoHome className="icon md:hidden" />
