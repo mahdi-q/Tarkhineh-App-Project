@@ -8,13 +8,13 @@ function Navbar() {
   const { isToggleOpen } = useToggle();
 
   return (
-    <div className="border-b border-b-gray-200 p-5 shadow-sm lg:px-16 lg:py-6">
+    <div className="sticky top-0 z-10 border-b border-b-gray-200 bg-white bg-opacity-90 py-5 shadow-sm lg:px-16 lg:py-6">
       <div className="container flex flex-row items-center justify-between">
         <div
           className={
             isToggleOpen
-              ? "fixed left-0 top-0 h-screen w-full bg-gray-600/30 backdrop-blur-sm"
-              : ""
+              ? "fixed left-0 top-0 h-screen w-full bg-gray-600/30 backdrop-blur-sm md:hidden"
+              : "md:hidden"
           }
         >
           <Sidebar />
