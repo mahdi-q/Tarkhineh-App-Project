@@ -1,0 +1,70 @@
+import { FaInstagram } from "react-icons/fa";
+import { PiTelegramLogoLight } from "react-icons/pi";
+import { TfiTwitter } from "react-icons/tfi";
+import { Link } from "react-router-dom";
+
+const access = [
+  { title: "پرسش های متداول", link: "FAQ" },
+  { title: "قوانین ترخینه", link: "rules" },
+  { title: "حریم خصوصی", link: "privacy" },
+];
+
+const branches = [
+  { title: "شعبه اکباتان", link: "branch/ekbatan" },
+  { title: "شعبه چالوس", link: "branch/chalos" },
+  { title: "شعبه اقدسیه", link: "branch/aghdasiyeh" },
+  { title: "شعبه ونک", link: "branch/vanak" },
+];
+
+function FooterLinks() {
+  return (
+    <div className="flex flex-row items-start gap-x-16 text-white xl:gap-x-32">
+      <div>
+        <h2 className="text-lg font-light lg:font-bold">دسترسی آسان</h2>
+
+        <ul className="mt-2 space-y-2 pr-3 text-sm font-light lg:mt-4 lg:space-y-4 lg:text-base">
+          {access.map((item) => (
+            <li key={item.link} className="hover:text-tint-600">
+              <Link to={item.link}>{item.title}</Link>
+            </li>
+          ))}
+
+          <li>
+            <ul className="flex items-center gap-x-3 lg:gap-x-6">
+              <li>
+                <Link target="_blank" to="https://x.com/">
+                  <TfiTwitter className="icon hover:text-tint-600" />
+                </Link>
+              </li>
+
+              <li>
+                <Link target="_blank" to="https://instagram.com/">
+                  <FaInstagram className="icon hover:text-tint-600" />
+                </Link>
+              </li>
+
+              <li>
+                <Link target="_blank" to="https://telegram.org/">
+                  <PiTelegramLogoLight className="icon hover:text-tint-600" />
+                </Link>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 className="text-lg font-light lg:font-bold">شعبه های ترخینه</h2>
+
+        <ul className="mt-2 space-y-2 pr-3 text-sm font-light lg:mt-4 lg:space-y-4 lg:text-base">
+          {branches.map((item) => (
+            <li key={item.link} className="hover:text-tint-600">
+              <Link to={item.link}>{item.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+export default FooterLinks;
