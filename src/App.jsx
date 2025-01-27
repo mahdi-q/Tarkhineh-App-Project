@@ -3,6 +3,7 @@ import AppLayout from "./Pages/AppLayout";
 import Home from "./Pages/Home";
 import AppProviders from "./Providers/AppProviders";
 import { Toaster } from "react-hot-toast";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
+
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </AppProviders>
