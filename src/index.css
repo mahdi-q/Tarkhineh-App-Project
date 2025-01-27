@@ -91,6 +91,9 @@
   .icon {
     @apply h-5 w-5 md:h-6 md:w-6;
   }
+  .primary-button {
+    @apply rounded bg-primary px-3 py-2 text-sm font-light text-white transition-all duration-300 ease-in-out hover:bg-white hover:font-bold hover:text-primary lg:px-6 lg:text-base lg:font-normal;
+  }
 }
 
 html,
