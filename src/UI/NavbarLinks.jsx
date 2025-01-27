@@ -5,6 +5,16 @@ import { LuPhoneCall, LuUsersRound } from "react-icons/lu";
 import { GoHome } from "react-icons/go";
 import { useState } from "react";
 import NavbarDropDown from "./NavbarDropDown";
+import { useLocation } from "react-router-dom";
+
+const branches = {
+  ekbatan: "اکباتان",
+  aghdasiyeh: "اقدسیه",
+  chalos: "چالوس",
+  vanak: "ونک",
+};
+
+const menus = ["main-food", "appetizer", "dessert", "drink"];
 
 function NavbarLinks() {
   const navbarLinkClass =
@@ -12,6 +22,8 @@ function NavbarLinks() {
 
   const [isOpenBranch, setIsOpenBranch] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  const { pathname } = useLocation();
 
   return (
     <ul className="flex min-w-64 flex-col gap-y-3 px-4 md:flex-row md:items-center md:gap-x-4 md:px-0 lg:gap-x-6">
@@ -28,12 +40,13 @@ function NavbarLinks() {
         <NavbarDropDown
           state={isOpenBranch}
           setState={setIsOpenBranch}
-          text="شعبه"
+          text={branches[pathname.split("/")[2]] || "شعبه"}
+          isSelected={branches[pathname.split("/")[2]]}
           items={[
-            { title: "اکباتان", link: "/" },
-            { title: "چالوس", link: "/b" },
-            { title: "اقدسیه", link: "/c" },
-            { title: "ونک", link: "/d" },
+            { title: "اکباتان", link: "/branch/ekbatan" },
+            { title: "چالوس", link: "/branch/chalos" },
+            { title: "اقدسیه", link: "/branch/aghdasiyeh" },
+            { title: "ونک", link: "/branch/vanak" },
           ]}
         />
       </li>
@@ -45,11 +58,12 @@ function NavbarLinks() {
           state={isOpenMenu}
           setState={setIsOpenMenu}
           text="منو"
+          isSelected={menus.includes(pathname.split("/")[2])}
           items={[
-            { title: "غذای اصلی", link: "/e" },
-            { title: "پیش غذا", link: "/f" },
-            { title: "دسر", link: "/g" },
-            { title: "نوشیدنی", link: "/h" },
+            { title: "غذای اصلی", link: "/menu/main-food" },
+            { title: "پیش غذا", link: "/menu/appetizer" },
+            { title: "دسر", link: "/menu/dessert" },
+            { title: "نوشیدنی", link: "/menu/drink" },
           ]}
         />
       </li>

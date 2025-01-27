@@ -2,7 +2,7 @@ import { HiChevronDown } from "react-icons/hi2";
 import CustomNavLink from "./CustomNavLink";
 import useOutsideClick from "../Hooks/useOutsideClick";
 
-function NavbarDropDown({ state, setState, text, items }) {
+function NavbarDropDown({ state, setState, text, items, isSelected }) {
   const dropDownLinkClass =
     "border-b border-b-gray-300 px-2 py-2 text-sm text-gray-800 last:border-none md:hover:text-primary";
 
@@ -11,7 +11,7 @@ function NavbarDropDown({ state, setState, text, items }) {
   return (
     <div ref={ref}>
       <button
-        className="flex min-w-60 items-center justify-between gap-x-2 md:min-w-max"
+        className={`${isSelected ? "text-primary md:border-b md:border-b-primary md:pb-1 md:font-bold" : ""} flex min-w-60 items-center justify-between gap-x-2 md:min-w-max`}
         onClick={() => setState((is) => !is)}
       >
         <span>{text}</span>
@@ -28,7 +28,11 @@ function NavbarDropDown({ state, setState, text, items }) {
         }
       >
         {items.map((item) => (
-          <li key={item.link} className={dropDownLinkClass}>
+          <li
+            onClick={() => setState(false)}
+            key={item.link}
+            className={dropDownLinkClass}
+          >
             <CustomNavLink
               to={item.link}
               className="md:border-none md:font-semibold"

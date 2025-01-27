@@ -10,7 +10,7 @@ function CustomNavLink({ to, children, className }) {
       onClick={() => setIsToggleOpen(false)}
       className={({ isActive }) =>
         isActive
-          ? `${className} flex flex-row items-center gap-x-2 text-primary md:border-b md:border-b-primary md:font-bold`
+          ? `${className} flex flex-row items-center gap-x-2 text-primary md:border-b md:border-b-primary md:pb-1 md:font-bold`
           : "flex flex-row items-center gap-x-2"
       }
     >
