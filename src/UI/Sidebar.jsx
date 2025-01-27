@@ -17,7 +17,7 @@ function Sidebar() {
       <div
         className={`${isToggleOpen ? "absolute right-0 top-0 z-10 flex h-screen min-w-60 flex-col bg-white" : "hidden"}`}
       >
-        <div className="mb-2 h-28 w-full bg-[url(/Images/sidebar-image.jpg)] bg-cover bg-center">
+        <div className="mb-2 h-28 w-full bg-[url(https://raw.githubusercontent.com/mahdi-q/Tarkhineh-App-API/refs/heads/master/images/sidebar-image.webp)] bg-cover bg-center">
           <div className="relative flex h-full w-full items-center bg-gray-800/20 backdrop-brightness-50">
             <Link onClick={() => setIsToggleOpen(false)} to="/">
               <img

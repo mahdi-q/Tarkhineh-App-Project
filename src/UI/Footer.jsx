@@ -3,7 +3,7 @@ import FooterLinks from "./FooterLinks";
 
 function Footer() {
   return (
-    <div className="min-h-40 bottom-0 w-full bg-[url(/Images/footer-image.jpg)] bg-cover bg-center lg:min-h-80">
+    <div className="bottom-0 min-h-40 w-full bg-[url(https://raw.githubusercontent.com/mahdi-q/Tarkhineh-App-API/refs/heads/master/images/footer-image.webp)] bg-cover bg-center lg:min-h-80">
       <div className="h-full w-full bg-gray-800/20 p-5 backdrop-brightness-50 md:px-16 lg:py-10 xl:px-28">
         <div className="container flex items-start justify-between">
           <FooterLinks />
