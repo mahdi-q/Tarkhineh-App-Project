@@ -35,7 +35,7 @@ function NavbarLinks() {
       </li>
 
       <li className={navbarLinkClass}>
-        <TbHomePlus className="icon mt-1 self-start md:hidden" />
+        <TbHomePlus className="icon self-start md:hidden" />
 
         <NavbarDropDown
           state={isOpenBranch}

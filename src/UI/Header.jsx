@@ -80,7 +80,7 @@ function Header({ slides }) {
         </div>
 
         <div
-          className={`${slides.length > 1 ? "" : "opacity-0"} rounde absolute -bottom-1 left-1/2 flex -translate-x-1/2 transform items-center gap-x-2 rounded-t-lg bg-white px-6 py-2 md:px-8`}
+          className={`${slides.length > 1 ? "" : "opacity-0"} rounde absolute -bottom-1 left-1/2 flex -translate-x-1/2 transform items-center gap-x-2 rounded-t-lg bg-white px-4 py-2 md:px-6`}
         >
           {slides.map((_, index) => (
             <button

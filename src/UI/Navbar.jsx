@@ -8,7 +8,7 @@ function Navbar() {
   const { isToggleOpen } = useToggle();
 
   return (
-    <div className="sticky top-0 z-10 border-b border-b-gray-200 bg-white bg-opacity-90 py-5 shadow-sm lg:px-16 lg:py-6">
+    <div className="sticky top-0 z-10 border-b border-b-gray-200 bg-white bg-opacity-90 py-4 shadow-sm lg:px-16">
       <div className="container flex flex-row items-center justify-between">
         <div
           className={

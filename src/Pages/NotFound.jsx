@@ -5,7 +5,7 @@ function NotFound() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center justify-center gap-y-4 py-8">
+    <div className="flex flex-col h-screen items-center justify-center gap-y-4 py-8">
       <span className="text-8xl font-bold text-primary lg:text-9xl">404</span>
 
       <span className="text-lg font-semibold text-black">
