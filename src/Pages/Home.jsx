@@ -1,8 +1,9 @@
+import MenuCards from "../Features/Home/MenuCards";
 import Header from "../UI/Header";
 
 function Home() {
   return (
-    <div className="h-screen">
+    <div className="">
       <Header
         slides={[
           {
@@ -42,6 +43,8 @@ function Home() {
           },
         ]}
       />
+
+      <MenuCards/>
     </div>
   );
 }

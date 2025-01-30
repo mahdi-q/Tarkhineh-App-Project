@@ -94,6 +94,9 @@
   .primary-button {
     @apply rounded bg-primary px-3 py-2 text-sm font-light text-white transition-all duration-300 ease-in-out hover:bg-white hover:font-bold hover:text-primary lg:px-6 lg:text-base lg:font-normal;
   }
+  .white-button {
+    @apply w-3/4 text-nowrap rounded bg-white py-2 text-sm font-normal text-gray-800 shadow-xl shadow-gray-400 transition-all duration-300 ease-in hover:font-semibold md:w-3/5 md:text-base xl:text-lg;
+  }
 }
 
 html,
