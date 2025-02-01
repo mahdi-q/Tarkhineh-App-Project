@@ -1,3 +1,4 @@
+import About from "../Features/Home/About";
 import MenuCards from "../Features/Home/MenuCards";
 import Header from "../UI/Header";
 
@@ -44,7 +45,9 @@ function Home() {
         ]}
       />
 
-      <MenuCards/>
+      <MenuCards />
+
+      <About />
     </div>
   );
 }
