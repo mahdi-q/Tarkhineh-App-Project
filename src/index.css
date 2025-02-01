@@ -97,6 +97,9 @@
   .white-button {
     @apply w-3/4 text-nowrap rounded bg-white py-2 text-sm font-normal text-gray-800 shadow-xl shadow-gray-400 transition-all duration-300 ease-in hover:font-semibold md:w-3/5 md:text-base xl:text-lg;
   }
+  .outline-button {
+    @apply flex flex-row items-center justify-center gap-x-2 self-end rounded border border-white px-6 py-2 text-sm font-light text-white transition-all duration-300 hover:border-primary hover:text-primary xl:gap-x-4 xl:text-base xl:font-normal;
+  }
 }
 
 html,

@@ -100,7 +100,7 @@ function FooterForm() {
         </span>
       </div>
 
-      <button className="col-start-2 w-3/4 rounded border border-gray-500 py-2 text-sm font-light text-white hover:border-tint-700 hover:text-tint-700">
+      <button className="outline-button col-start-2 w-3/4 border-gray-500 hover:border-tint-700 hover:text-tint-700">
         ارسال پیام
       </button>
     </form>
