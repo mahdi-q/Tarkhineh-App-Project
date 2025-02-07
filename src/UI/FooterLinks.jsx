@@ -20,7 +20,7 @@ function FooterLinks() {
   return (
     <div className="flex flex-row items-start gap-x-16 text-white xl:gap-x-32">
       <div>
-        <h2 className="text-lg font-light lg:font-bold">دسترسی آسان</h2>
+        <h2 className="font-medium lg:text-lg lg:font-bold">دسترسی آسان</h2>
 
         <ul className="mt-2 space-y-2 pr-3 text-sm font-light lg:mt-4 lg:space-y-4 lg:text-base">
           {access.map((item) => (
@@ -54,7 +54,7 @@ function FooterLinks() {
       </div>
 
       <div>
-        <h2 className="text-lg font-light lg:font-bold">شعبه های ترخینه</h2>
+        <h2 className="font-medium lg:text-lg lg:font-bold">شعبه های ترخینه</h2>
 
         <ul className="mt-2 space-y-2 pr-3 text-sm font-light lg:mt-4 lg:space-y-4 lg:text-base">
           {branches.map((item) => (

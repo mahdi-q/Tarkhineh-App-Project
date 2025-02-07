@@ -30,7 +30,7 @@ function About() {
 
             <button
               onClick={() => navigate("/about-us")}
-              className="outline-button"
+              className="outline-button self-end"
             >
               <span>اطلاعات بیشتر</span>
               <HiChevronLeft className="icon" />
