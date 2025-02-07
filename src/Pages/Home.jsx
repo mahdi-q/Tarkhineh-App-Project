@@ -1,4 +1,5 @@
 import About from "../Features/Home/About";
+import BranchCards from "../Features/Home/BranchCards";
 import MenuCards from "../Features/Home/MenuCards";
 import Header from "../UI/Header";
 
@@ -48,6 +49,8 @@ function Home() {
       <MenuCards />
 
       <About />
+
+      <BranchCards/>
     </div>
   );
 }
