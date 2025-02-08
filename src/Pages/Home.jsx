@@ -2,6 +2,7 @@ import About from "../Features/Home/About";
 import BranchCards from "../Features/Home/BranchCards";
 import MenuCards from "../Features/Home/MenuCards";
 import Header from "../UI/Header";
+import SearchBar from "../UI/SearchBar";
 
 function Home() {
   return (
@@ -46,11 +47,15 @@ function Home() {
         ]}
       />
 
+      <div className="lg:hidden">
+        <SearchBar />
+      </div>
+
       <MenuCards />
 
       <About />
 
-      <BranchCards/>
+      <BranchCards />
     </div>
   );
 }
