@@ -18,7 +18,7 @@ const menus = ["main-food", "appetizer", "dessert", "drink"];
 
 function NavbarLinks() {
   const navbarLinkClass =
-    "relative flex items-center gap-x-1 border-b border-b-gray-400 pb-2 text-gray-800 shadow-sm last:border-none last:shadow-none md:border-none md:font-medium md:text-gray-700 md:shadow-none md:hover:text-primary";
+    "relative flex items-center gap-x-1 border-b border-b-gray-400 pb-2 text-sm text-gray-800 shadow-sm last:border-none last:shadow-none md:border-none md:font-medium md:text-gray-700 md:shadow-none md:hover:text-primary lg:text-base";
 
   const [isOpenBranch, setIsOpenBranch] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
