@@ -3,15 +3,13 @@ import { CiImageOn } from "react-icons/ci";
 import { FaExpand } from "react-icons/fa";
 import { HiChevronLeft } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
-import useOutsideClick from "../../Hooks/useOutsideClick";
 import { IoClose } from "react-icons/io5";
+import Modal from "../../UI/Modal";
 
 function BranchCard({ branch }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navigate = useNavigate();
-
-  const ref = useOutsideClick(() => setIsModalOpen(false));
 
   return (
     <div>
@@ -60,31 +58,20 @@ function BranchCard({ branch }) {
         </button>
       </div>
 
-      <div
-        className={
-          isModalOpen
-            ? "fixed left-0 top-0 z-10 h-screen w-full bg-gray-600/30 backdrop-blur-sm"
-            : ""
-        }
-      >
-        <div
-          ref={ref}
-          className={`${isModalOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"} absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 transform rounded-lg transition-opacity duration-200 ease-in-out`}
-        >
-          <img
-            className="aspect-[6/7] w-[80vw] max-w-[300px] rounded-lg object-cover md:aspect-[8/5] md:max-w-[450px] lg:max-w-[600px] xl:max-w-[750px]"
-            src={branch.image}
-            alt={branch.name}
-          />
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <img
+          className="aspect-[6/7] w-[80vw] max-w-[300px] rounded-lg object-cover md:aspect-[8/5] md:max-w-[450px] lg:max-w-[600px] xl:max-w-[750px]"
+          src={branch.image}
+          alt={branch.name}
+        />
 
-          <button
-            onClick={() => setIsModalOpen(false)}
-            className="absolute left-3 top-3 text-white"
-          >
-            <IoClose className="h-6 w-6 xl:h-8 xl:w-8" />
-          </button>
-        </div>
-      </div>
+        <button
+          onClick={() => setIsModalOpen(false)}
+          className="absolute left-3 top-3 text-white"
+        >
+          <IoClose className="h-6 w-6 xl:h-8 xl:w-8" />
+        </button>
+      </Modal>
     </div>
   );
 }
