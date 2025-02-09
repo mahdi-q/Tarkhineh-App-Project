@@ -1,4 +1,4 @@
-import CustomNavLink from "./CustomNavLink";
+import CustomNavLink from "../../UI/CustomNavLink";
 import { CgMenuBoxed } from "react-icons/cg";
 import { TbHomePlus } from "react-icons/tb";
 import { LuPhoneCall, LuUsersRound } from "react-icons/lu";

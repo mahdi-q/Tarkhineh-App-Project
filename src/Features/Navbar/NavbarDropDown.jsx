@@ -1,6 +1,6 @@
 import { HiChevronDown } from "react-icons/hi2";
-import CustomNavLink from "./CustomNavLink";
-import useOutsideClick from "../Hooks/useOutsideClick";
+import CustomNavLink from "../../UI/CustomNavLink";
+import useOutsideClick from "../../Hooks/useOutsideClick";
 
 function NavbarDropDown({ state, setState, text, items, isSelected }) {
   const dropDownLinkClass =

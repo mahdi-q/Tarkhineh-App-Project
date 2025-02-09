@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CiSearch, CiShoppingCart, CiUser } from "react-icons/ci";
-import Modal from "./Modal";
-import SearchBar from "./SearchBar";
+import SearchBar from "../../UI/SearchBar";
+import Modal from "../../UI/Modal";
 
 function NavbarBtns() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

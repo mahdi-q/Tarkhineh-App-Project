@@ -1,8 +1,8 @@
 import NavbarBtns from "./NavbarBtns";
 import NavbarLinks from "./NavbarLinks";
-import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import { useToggle } from "../Contexts/ToggleContext";
+import { Link } from "react-router-dom";
+import { useToggle } from "../../Contexts/ToggleContext";
 
 function Navbar() {
   const { isToggleOpen } = useToggle();

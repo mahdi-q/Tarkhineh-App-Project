@@ -1,8 +1,8 @@
 import { IoCloseOutline, IoMenu } from "react-icons/io5";
-import { useToggle } from "../Contexts/ToggleContext";
 import NavbarLinks from "./NavbarLinks";
-import useOutsideClick from "../Hooks/useOutsideClick";
 import { Link } from "react-router-dom";
+import { useToggle } from "../../Contexts/ToggleContext";
+import useOutsideClick from "../../Hooks/useOutsideClick";
 
 function Sidebar() {
   const { isToggleOpen, setIsToggleOpen } = useToggle();
