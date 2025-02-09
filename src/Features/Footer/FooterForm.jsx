@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import TextFieldInput from "./TextFieldInput";
-import TextAreaFieldInput from "./TextAreaFieldInput";
 import toast from "react-hot-toast";
+import TextFieldInput from "../../UI/TextFieldInput";
+import TextAreaFieldInput from "../../UI/TextAreaFieldInput";
 
 function FooterForm() {
   const {
