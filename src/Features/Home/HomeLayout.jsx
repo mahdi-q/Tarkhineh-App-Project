@@ -48,7 +48,7 @@ function HomeLayout() {
       <Header slides={slides} />
 
       <div className="lg:hidden">
-        <SearchBar />
+        <SearchBar pathname="search-result"/>
       </div>
 
       <MenuCards />

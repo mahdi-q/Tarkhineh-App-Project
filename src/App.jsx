@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import AppProviders from "./Providers/AppProviders";
 import { Toaster } from "react-hot-toast";
 import NotFound from "./Pages/NotFound";
+import SearchResult from "./Pages/SearchResult";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
+
+          <Route path="search-result" element={<SearchResult/>} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

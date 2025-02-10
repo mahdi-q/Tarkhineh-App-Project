@@ -23,7 +23,10 @@ function SearchBtn() {
         <div className="flex flex-col items-center justify-center rounded-b-lg bg-white p-10 xl:px-20">
           <p>لطفا متن خود را تایپ و سپس دکمه Enter را بزنید.</p>
 
-          <SearchBar />
+          <SearchBar
+            pathname="search-result"
+            onClose={() => setIsSearchOpen(false)}
+          />
         </div>
       </Modal>
     </div>
