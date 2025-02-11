@@ -1,10 +1,12 @@
-import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { createSearchParams, useNavigate } from "react-router-dom";
 
-function SearchBar({ pathname = "", onClose = () => {}, defaultValue = "" }) {
-  const [searchValue, setSearchValue] = useState(defaultValue);
-
+function SearchBar({
+  searchValue,
+  setSearchValue,
+  pathname = "",
+  onClose = () => {},
+}) {
   const navigate = useNavigate();
 
   const onChange = (e) => {

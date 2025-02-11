@@ -4,6 +4,7 @@ import SearchBar from "../../UI/SearchBar";
 import { useState } from "react";
 
 function SearchBtn() {
+  const [searchValue, setSearchValue] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
@@ -24,6 +25,8 @@ function SearchBtn() {
           <p>لطفا متن خود را تایپ و سپس دکمه Enter را بزنید.</p>
 
           <SearchBar
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
             pathname="search-result"
             onClose={() => setIsSearchOpen(false)}
           />

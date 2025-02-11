@@ -1,14 +1,65 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { useMenu } from "../Contexts/MenuContext";
+import SearchBar from "../UI/SearchBar";
 
 function SearchResult() {
+  const [searchValue, setSearchValue] = useState("");
+  const [result, setResult] = useState([]);
+
   const [searchParams] = useSearchParams();
 
-  useEffect(() => {
-    const searchQuery = searchParams.get("q");
-    console.log(searchQuery.split("+").join(" "));
-  }, [searchParams]);
+  const { menu } = useMenu();
 
-  return <div>SearchResult</div>;
+  const searchQuery = searchParams.get("q").split("+").join(" ") || "";
+
+  useEffect(() => {
+    if (searchQuery === "") return;
+
+    setSearchValue(searchQuery);
+
+    const filteredItems = menu.filter((item) =>
+      item.title.includes(searchQuery),
+    );
+
+    setResult(filteredItems);
+  }, [menu, searchParams, searchQuery]);
+
+  return (
+    <div className="flex flex-col items-center justify-center py-6 lg:py-12">
+      <div>
+        {result.length === 0 ? (
+          <p className="text-sm font-medium md:text-base">
+            موردی با این مشخصات پیدا نکردیم!
+          </p>
+        ) : (
+          <div className="font-bold md:text-lg">
+            <span>نتایج جستجو برای: </span>
+            <span className="text-primary">{searchQuery}</span>
+          </div>
+        )}
+      </div>
+
+      <div className="w-[300px] pb-10 md:w-[400px]">
+        <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
+      </div>
+
+      <div>
+        {result.length === 0 ? (
+          <img
+            className="aspect-square h-64 w-64 object-contain md:h-80 md:w-80 lg:h-96 lg:w-96"
+            src="/Images/search-result.png"
+            alt="no-result"
+          />
+        ) : (
+          <div>
+            {result.map((item) => (
+              <div key={item.id}>{item.title}</div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
 export default SearchResult;

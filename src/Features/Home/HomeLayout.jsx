@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "../../UI/Header";
 import SearchBar from "../../UI/SearchBar";
 import About from "./About";
@@ -43,12 +44,18 @@ const slides = [
 ];
 
 function HomeLayout() {
+  const [searchValue, setSearchValue] = useState("");
+
   return (
     <div>
       <Header slides={slides} />
 
       <div className="lg:hidden">
-        <SearchBar pathname="search-result"/>
+        <SearchBar
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          pathname="search-result"
+        />
       </div>
 
       <MenuCards />
