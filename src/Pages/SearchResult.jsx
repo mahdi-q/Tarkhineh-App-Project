@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useMenu } from "../Contexts/MenuContext";
 import SearchBar from "../UI/SearchBar";
+import FoodCard from "../UI/FoodCard";
 
 function SearchResult() {
   const [searchValue, setSearchValue] = useState("");
@@ -52,9 +53,9 @@ function SearchResult() {
             alt="no-result"
           />
         ) : (
-          <div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
             {result.map((item) => (
-              <div key={item.id}>{item.title}</div>
+              <FoodCard key={item.id} food={item} />
             ))}
           </div>
         )}
