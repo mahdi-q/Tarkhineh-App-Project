@@ -44,11 +44,15 @@ function FoodCard({ food }) {
 
           <div className="space-y-1 lg:space-y-2">
             <div className="flex flex-row items-center justify-end gap-x-1">
-              <span className="text-xs text-gray-500 line-through">
+              <span
+                className={`${main_price ? "block" : "hidden"} text-xs text-gray-500 line-through`}
+              >
                 {main_price}
               </span>
 
-              <span className="rounded-full bg-error-100 px-2 py-[2px] text-xs font-semibold text-error-300 lg:text-sm">
+              <span
+                className={`${discount ? "block" : "hidden"} rounded-full bg-error-100 px-2 py-[2px] text-xs font-semibold text-error-300 lg:text-sm`}
+              >
                 {discount}
               </span>
             </div>
