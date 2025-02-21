@@ -27,7 +27,7 @@ function SearchResult() {
   }, [menu, searchParams, searchQuery]);
 
   return (
-    <div className="flex flex-col items-center justify-center py-6 lg:py-12">
+    <div className="minimum-height flex flex-col items-center justify-center py-6 lg:py-12">
       <div>
         {result.length === 0 ? (
           <p className="text-sm font-medium md:text-base">

@@ -88,6 +88,9 @@
 /* Classes */
 
 @layer components {
+  .minimum-height {
+    @apply min-h-[calc(100vh-73px)] lg:min-h-[calc(100vh-81px)];
+  }
   .icon {
     @apply h-5 w-5 md:h-6 md:w-6;
   }
