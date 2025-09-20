@@ -5,7 +5,7 @@ function FoodCard({ food }) {
   const { image, title, main_price, discount, price, rate, score } = food;
 
   return (
-    <div className="max-w-[198px] rounded border border-gray-400 transition-all duration-300 ease-in-out hover:border-primary lg:max-w-[288px] lg:rounded-lg">
+    <div className="w-[198px] rounded border border-gray-400 transition-all duration-300 ease-in-out hover:border-primary lg:w-[288px] lg:rounded-lg">
       <img
         className="h-[120px] w-full rounded-t object-cover lg:h-[256px] lg:rounded-t-lg"
         src={image}
