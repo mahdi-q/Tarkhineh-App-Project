@@ -103,6 +103,9 @@
   .outline-button {
     @apply flex flex-row items-center justify-center gap-x-2 rounded border border-white px-6 py-2 text-sm font-light text-white transition-all duration-300 hover:border-primary hover:text-primary xl:gap-x-4 xl:text-base xl:font-normal;
   }
+  .outline-primary-button {
+    @apply flex flex-row items-center justify-center gap-x-2 rounded border border-primary px-4 py-2 text-xs font-normal text-primary lg:text-base;
+  }
 }
 
 html,
@@ -165,6 +168,11 @@ input[type="number"] {
     scrollbar-width: thin;
     scrollbar-color: rgb(var(--color-primary)) rgb(var(--color-gray-300));
   }
+}
+
+/* Disable Scroll Class */
+.scroll-none::-webkit-scrollbar {
+  display: none;
 }
 
 /* smooth scrolling */
