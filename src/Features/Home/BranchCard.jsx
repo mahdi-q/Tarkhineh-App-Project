@@ -31,7 +31,7 @@ function BranchCard({ branch }) {
 
           <button
             className="outline-button gap-x-2 border-gray-300 px-2 py-1 text-gray-600 group-hover:border-primary group-hover:text-primary lg:opacity-0 lg:group-hover:opacity-100"
-            onClick={() => navigate(`/branches/${branch.name}`)}
+            onClick={() => navigate(`/branch/${branch.name}`)}
           >
             <span>صفحه شعبه</span>
 

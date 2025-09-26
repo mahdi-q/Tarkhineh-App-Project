@@ -1,4 +1,10 @@
+import EkbatanLayout from "../Features/Branches/Ekbatan/EkbatanLayout";
+
 function EkbatanBranch() {
-  return <div>EkbatanBranch</div>;
+  return (
+    <div>
+      <EkbatanLayout />
+    </div>
+  );
 }
 export default EkbatanBranch;
