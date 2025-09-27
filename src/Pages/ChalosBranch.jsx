@@ -1,6 +1,10 @@
+import ChalosLayout from "../Features/Branches/Chalos/ChalosLayout";
+
 function ChalosBranch() {
   return (
-    <div>ChalosBranch</div>
-  )
+    <div>
+      <ChalosLayout />
+    </div>
+  );
 }
-export default ChalosBranch
+export default ChalosBranch;
