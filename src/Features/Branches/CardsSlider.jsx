@@ -1,11 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper/modules";
 import FoodCard from "../../UI/FoodCard";
+import MenuIcon from "../../Icons/MenuIcon";
+import { useNavigate } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/free-mode";
-import MenuIcon from "../../Icons/MenuIcon";
-import { useNavigate } from "react-router-dom";
 
 function CardsSlider({ title, cards, isPrimary = false, isLast = false }) {
   const navigate = useNavigate();

@@ -4,6 +4,7 @@ import Header from "../../../UI/Header";
 import SearchBar from "../../../UI/SearchBar";
 import CardsSlider from "../CardsSlider";
 import BranchInfo from "../BranchInfo";
+import CommentsSlider from "../CommentsSlider";
 
 const slides = [
   {
@@ -45,7 +46,6 @@ const slides = [
 
 function EkbatanLayout() {
   const [searchValue, setSearchValue] = useState("");
-
   const { ekbatanBranch } = useBranches();
 
   if (
@@ -88,6 +88,8 @@ function EkbatanLayout() {
         location={ekbatanBranch.location}
         work_time={ekbatanBranch.work_time}
       />
+
+      <CommentsSlider comments={ekbatanBranch.comments} />
     </div>
   );
 }

@@ -180,3 +180,25 @@ html,
 body {
   scroll-behavior: smooth;
 }
+
+.swiper-pagination {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 18px !important;
+}
+
+.swiper-pagination-bullet {
+  background: rgb(var(--color-gray-600)) !important;
+  width: 8px !important;
+  height: 8px !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgb(var(--color-primary)) !important;
+  width: 12px !important;
+  height: 12px !important;
+  opacity: 1;
+}
