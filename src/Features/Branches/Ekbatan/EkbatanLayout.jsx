@@ -53,7 +53,11 @@ function EkbatanLayout() {
     !ekbatanBranch.special_foods ||
     ekbatanBranch.special_foods.length <= 0
   )
-    return null;
+    return (
+      <div className="flex h-[60vh] animate-pulse items-center justify-center font-bold lg:text-lg">
+        در حال بارگذاری اطلاعات ...
+      </div>
+    );
 
   return (
     <div>
