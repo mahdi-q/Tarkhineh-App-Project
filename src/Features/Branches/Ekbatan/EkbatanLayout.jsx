@@ -3,9 +3,7 @@ import { useBranches } from "../../../Contexts/BranchesContext";
 import Header from "../../../UI/Header";
 import SearchBar from "../../../UI/SearchBar";
 import CardsSlider from "../CardsSlider";
-
-import "swiper/css";
-import "swiper/css/free-mode";
+import BranchInfo from "../BranchInfo";
 
 const slides = [
   {
@@ -81,6 +79,14 @@ function EkbatanLayout() {
         title="غذاهای غیر ایرانی"
         cards={ekbatanBranch.foreign_foods}
         isLast
+      />
+
+      <BranchInfo
+        title={ekbatanBranch.title}
+        image={ekbatanBranch.image}
+        phone_numberes={ekbatanBranch.phone_numberes}
+        location={ekbatanBranch.location}
+        work_time={ekbatanBranch.work_time}
       />
     </div>
   );
