@@ -28,6 +28,7 @@ function CardsSlider({ title, cards, isPrimary = false, isLast = false }) {
             freeMode={true}
             slidesPerView="auto"
             className="flex items-stretch"
+            wrapperClass="py-4"
           >
             <SwiperSlide className="flex-1">
               <div className="w-4 lg:w-8"></div>
@@ -57,7 +58,7 @@ function CardsSlider({ title, cards, isPrimary = false, isLast = false }) {
           <div className="mt-3 flex items-center justify-center lg:mt-6">
             <button
               onClick={() => navigate("/menu")}
-              className="outline-primary-button"
+              className="outline-primary-button transition-all duration-200 hover:scale-105 hover:bg-primary hover:stroke-white hover:text-white"
             >
               <MenuIcon className="h-4 w-4 lg:h-6 lg:w-6" />
 

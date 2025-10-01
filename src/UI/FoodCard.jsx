@@ -5,7 +5,7 @@ function FoodCard({ food }) {
   const { image, title, main_price, discount, price, rate, score } = food;
 
   return (
-    <div className="w-[198px] h-full rounded border border-gray-400 bg-white transition-all duration-300 ease-in-out hover:border-primary lg:w-[288px] lg:rounded-lg">
+    <div className="!h-full w-[198px] rounded border border-gray-400 bg-white transition-all duration-300 ease-in-out hover:scale-[1.02] hover:border-primary hover:shadow-sm hover:shadow-tint-200 lg:w-[288px] lg:rounded-lg">
       <img
         className="h-[120px] w-full rounded-t object-cover lg:h-[256px] lg:rounded-t-lg"
         src={image}
@@ -17,7 +17,7 @@ function FoodCard({ food }) {
           {title}
         </h4>
 
-        <div className="flow-row mb-2 flex w-full items-center justify-between lg:mb-4">
+        <div className="flow-row mb-2 flex w-full items-stretch justify-between lg:mb-4">
           <div className="space-y-1 lg:space-y-2">
             <div className="flow-row flex items-center gap-1 text-gray-500">
               <span>
@@ -43,16 +43,14 @@ function FoodCard({ food }) {
           </div>
 
           <div className="space-y-1 lg:space-y-2">
-            <div className="flex flex-row items-center justify-end gap-x-1">
-              <span
-                className={`${main_price ? "block" : "hidden"} text-xs text-gray-500 line-through`}
-              >
+            <div
+              className={`${discount ? "opacity-100" : "h-6 opacity-0"} flex flex-row items-center justify-end gap-x-1`}
+            >
+              <span className="text-xs leading-6 text-gray-500 line-through lg:text-sm">
                 {main_price}
               </span>
 
-              <span
-                className={`${discount ? "block" : "hidden"} rounded-full bg-error-100 px-2 py-[2px] text-xs font-semibold text-error-300 lg:text-sm`}
-              >
+              <span className="rounded-full bg-error-100 px-2 py-[2px] text-xs font-semibold leading-6 text-error-300 lg:text-sm">
                 {discount}
               </span>
             </div>

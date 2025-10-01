@@ -24,7 +24,10 @@ function FooterLinks() {
 
         <ul className="mt-2 space-y-2 pr-3 text-sm font-light lg:mt-4 lg:space-y-4 lg:text-base">
           {access.map((item) => (
-            <li key={item.link} className="hover:text-tint-600">
+            <li
+              key={item.link}
+              className="transition-all duration-200 hover:text-tint-600"
+            >
               <Link to={item.link}>{item.title}</Link>
             </li>
           ))}
@@ -33,19 +36,19 @@ function FooterLinks() {
             <ul className="flex items-center gap-x-3 lg:gap-x-6">
               <li>
                 <Link target="_blank" to="https://x.com/">
-                  <TfiTwitter className="icon hover:text-tint-600" />
+                  <TfiTwitter className="icon transition-all duration-200 hover:text-tint-600" />
                 </Link>
               </li>
 
               <li>
                 <Link target="_blank" to="https://instagram.com/">
-                  <FaInstagram className="icon hover:text-tint-600" />
+                  <FaInstagram className="icon transition-all duration-200 hover:text-tint-600" />
                 </Link>
               </li>
 
               <li>
                 <Link target="_blank" to="https://telegram.org/">
-                  <PiTelegramLogoLight className="icon hover:text-tint-600" />
+                  <PiTelegramLogoLight className="icon transition-all duration-200 hover:text-tint-600" />
                 </Link>
               </li>
             </ul>
@@ -58,7 +61,10 @@ function FooterLinks() {
 
         <ul className="mt-2 space-y-2 pr-3 text-sm font-light lg:mt-4 lg:space-y-4 lg:text-base">
           {branches.map((item) => (
-            <li key={item.link} className="hover:text-tint-600">
+            <li
+              key={item.link}
+              className="transition-all duration-200 hover:text-tint-600"
+            >
               <Link to={item.link}>{item.title}</Link>
             </li>
           ))}
