@@ -10,6 +10,11 @@ import BranchLayout from "./Pages/BranchLayout";
 import AghdasiyehBranch from "./Pages/AghdasiyehBranch";
 import VanakBranch from "./Pages/VanakBranch";
 import ChalosBranch from "./Pages/ChalosBranch";
+import MenuLayout from "./Pages/MenuLayout";
+import MainFoodPage from "./Pages/MainFoodPage";
+import AppetizerPage from "./Pages/AppetizerPage";
+import DessertPage from "./Pages/DessertPage";
+import DrinkPage from "./Pages/DrinkPage";
 
 function App() {
   return (
@@ -27,6 +32,15 @@ function App() {
             <Route path="chalos" element={<ChalosBranch />} />
             <Route path="aghdasiyeh" element={<AghdasiyehBranch />} />
             <Route path="vanak" element={<VanakBranch />} />
+          </Route>
+
+          <Route path="menu" element={<MenuLayout />}>
+            <Route index element={<Navigate to="main-food" replace />} />
+
+            <Route path="main-food" element={<MainFoodPage />} />
+            <Route path="appetizer" element={<AppetizerPage />} />
+            <Route path="dessert" element={<DessertPage />} />
+            <Route path="drink" element={<DrinkPage />} />
           </Route>
 
           <Route path="search-result" element={<SearchResult />} />
