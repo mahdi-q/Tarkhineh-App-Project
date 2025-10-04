@@ -52,7 +52,7 @@ function Header({ slides }) {
 
                   {/* Image */}
                   <div className="flex flex-col items-center gap-y-4 lg:gap-y-8">
-                    <h1 className="text-center text-lg font-semibold md:text-2xl md:font-bold">
+                    <h1 className="text-center font-semibold md:text-lg md:font-bold lg:text-2xl">
                       {slide.text}
                     </h1>
 
@@ -89,7 +89,7 @@ function Header({ slides }) {
       <div
         className={`${
           slides.length > 1 ? "opacity-100" : "opacity-0"
-        } swiper-pagination-custom absolute !-bottom-1 !left-1/2 z-20 flex !w-fit !-translate-x-1/2 transform items-center justify-center gap-x-2 rounded-t-xl bg-white px-4 py-2 md:px-6`}
+        } swiper-pagination-custom absolute !bottom-0 !left-1/2 z-20 flex !w-fit !-translate-x-1/2 transform items-center justify-center gap-x-2 rounded-t-xl bg-white px-4 py-2 md:px-6`}
       />
     </div>
   );
