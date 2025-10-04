@@ -4,6 +4,7 @@ import { FreeMode, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import Star from "../../UI/Star";
 
 function CommentsSlider({ comments }) {
   return (
@@ -59,8 +60,8 @@ function CommentsSlider({ comments }) {
                       {comment.description}
                     </p>
 
-                    <div className="self-end text-xs lg:text-base">
-                      {/* StarIcon */}
+                    <div className="flex items-center gap-1 self-end text-xs lg:text-base">
+                      <Star rate={comment.rate} />
 
                       <span>{comment.rate}</span>
                     </div>
