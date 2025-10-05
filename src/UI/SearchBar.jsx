@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import {
   createSearchParams,
@@ -15,23 +16,26 @@ function SearchBar({
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
+  useEffect(() => {
+    if (searchParams.get("q")) {
+      setSearchValue(searchParams.get("q").split("+").join(" "));
+    }
+  }, []);
+
   const onChange = (e) => {
     setSearchValue(e.target.value);
   };
 
   const onSearch = () => {
-    if (searchValue.trim().length > 0) {
-      navigate({
-        pathname: pathname,
-        search: createSearchParams({
-          ...Object.fromEntries([...searchParams]),
-          q: searchValue.trim().replace(/\s+/g, " ").split(" ").join("+"),
-        }).toString(),
-      });
+    navigate({
+      pathname: pathname,
+      search: createSearchParams({
+        ...Object.fromEntries([...searchParams]),
+        q: searchValue.trim().replace(/\s+/g, " ").split(" ").join("+"),
+      }).toString(),
+    });
 
-      setSearchValue("");
-      onClose();
-    }
+    onClose();
   };
 
   return (
