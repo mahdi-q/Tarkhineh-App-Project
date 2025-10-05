@@ -5,45 +5,65 @@ const MenuContext = createContext();
 
 export function MenuProvider({ children }) {
   const [menu, setMenu] = useState([]);
+  const [mainFood, setMainFood] = useState({});
+  const [appetizer, setAppetizer] = useState({});
+  const [dessert, setDessert] = useState({});
+  const [drink, setDrink] = useState({});
 
-  const { data: main } = useFetch(
+  const { data: mainResponse } = useFetch(
     "https://tarkhineh-app-api.vercel.app/menu/1",
   );
-  const { data: appitappetizer } = useFetch(
+  const { data: appetizerResponse } = useFetch(
     "https://tarkhineh-app-api.vercel.app/menu/2",
   );
-  const { data: dessert } = useFetch(
+  const { data: dessertRespomse } = useFetch(
     "https://tarkhineh-app-api.vercel.app/menu/3",
   );
-  const { data: drink } = useFetch(
+  const { data: drinkResponse } = useFetch(
     "https://tarkhineh-app-api.vercel.app/menu/4",
   );
 
   useEffect(() => {
-    if (!main || !appitappetizer || !dessert || !drink) return;
+    if (
+      !mainResponse ||
+      !appetizerResponse ||
+      !dessertRespomse ||
+      !drinkResponse
+    )
+      return;
 
     setMenu([
-      ...(main.persian_foods || []),
-      ...(main.foreign_foods || []),
-      ...(main.pizzas || []),
-      ...(main.sandwiches || []),
-      //   ...(appitappetizer.persian_appetizers || []),
-      //   ...(appitappetizer.foreign_appetizers || []),
-      //   ...(appitappetizer.soups || []),
-      //   ...(appitappetizer.finger_foods || []),
-      //   ...(dessert.persian_desserts || []),
-      //   ...(dessert.foreign_desserts || []),
-      //   ...(dessert.jellies || []),
-      //   ...(dessert.cakes || []),
-      //   ...(drink.persian_drinks || []),
-      //   ...(drink.foreign_drinks || []),
-      //   ...(drink.cold_drinks || []),
-      //   ...(drink.hot_drinks || []),
+      ...(mainResponse.persian_foods || []),
+      ...(mainResponse.foreign_foods || []),
+      ...(mainResponse.pizzas || []),
+      ...(mainResponse.sandwiches || []),
+      //   ...(appetizerResponse.persian_appetizers || []),
+      //   ...(appetizerResponse.foreign_appetizers || []),
+      //   ...(appetizerResponse.soups || []),
+      //   ...(appetizerResponse.finger_foods || []),
+      //   ...(dessertRespomse.persian_desserts || []),
+      //   ...(dessertRespomse.foreign_desserts || []),
+      //   ...(dessertRespomse.jellies || []),
+      //   ...(dessertRespomse.cakes || []),
+      //   ...(drinkResponse.persian_drinks || []),
+      //   ...(drinkResponse.foreign_drinks || []),
+      //   ...(drinkResponse.cold_drinks || []),
+      //   ...(drinkResponse.hot_drinks || []),
     ]);
-  }, [main, appitappetizer, dessert, drink]);
+
+    setMainFood(mainResponse);
+
+    setAppetizer(appetizerResponse);
+
+    setDessert(dessertRespomse);
+
+    setDrink(drinkResponse);
+  }, [mainResponse, appetizerResponse, dessertRespomse, drinkResponse]);
 
   return (
-    <MenuContext.Provider value={{ menu, setMenu }}>
+    <MenuContext.Provider
+      value={{ menu, setMenu, mainFood, appetizer, dessert, drink }}
+    >
       {children}
     </MenuContext.Provider>
   );

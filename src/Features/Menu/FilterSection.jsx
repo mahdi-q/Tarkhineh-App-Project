@@ -46,7 +46,7 @@ function FilterSection({ filters }) {
   };
 
   return (
-    <div className="container flex flex-col items-center justify-between gap-3 px-0 py-2 lg:py-3 xl:flex-row">
+    <div className="container mb-11 flex flex-col items-center justify-between gap-3 px-0 py-2 lg:py-3 xl:flex-row">
       <div className="relative w-full">
         <Swiper
           modules={[FreeMode]}
@@ -79,12 +79,12 @@ function FilterSection({ filters }) {
         </Swiper>
       </div>
 
-      <div className="flex w-full items-center justify-center px-4 lg:pr-0">
+      <div className="flex w-full items-center justify-center px-4 lg:pr-0 xl:justify-end">
         <SearchBar
           searchValue={searchValue}
           setSearchValue={setSearchValue}
           pathname={pathname}
-          className="mx-0 mt-0 w-full max-w-lg"
+          className="!mx-0 !mt-0 w-full max-w-lg"
         />
       </div>
     </div>

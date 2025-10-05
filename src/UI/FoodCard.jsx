@@ -50,9 +50,7 @@ function FoodCard({ food }) {
                 {main_price}
               </span>
 
-              <span className="rounded-full bg-error-100 px-2 py-[2px] text-xs font-semibold leading-6 text-error-300 lg:text-sm">
-                {discount}
-              </span>
+              <span className="badge-error">{discount}</span>
             </div>
 
             <span className="text-sm font-medium lg:text-base">
