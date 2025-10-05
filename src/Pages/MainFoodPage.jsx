@@ -1,6 +1,10 @@
+import MainFoodLayout from "../Features/Menu/MainFood/MainFoodLayout";
+
 function MainFoodPage() {
   return (
-    <div>MainFoodPage</div>
-  )
+    <div>
+      <MainFoodLayout />
+    </div>
+  );
 }
-export default MainFoodPage
+export default MainFoodPage;
