@@ -113,7 +113,7 @@ function MainFoodLayout() {
     <div>
       <FilterSection filters={FILTERS} />
 
-      <div className="container mx-auto mb-6 flex flex-col gap-6 lg:mb-12 lg:gap-12">
+      <div className="container mx-auto mb-6 lg:mb-12">
         {isFiltered ? (
           <div>
             <div className="mb-3 flex items-center justify-between lg:mb-5">
@@ -143,7 +143,7 @@ function MainFoodLayout() {
             )}
           </div>
         ) : (
-          <div>
+          <div className="flex flex-col gap-6 lg:gap-12">
             <div>
               <div className="mb-3 flex items-center justify-between lg:mb-5">
                 <h2 className="font-bold text-gray-800 lg:text-2xl">
