@@ -8,7 +8,7 @@ function Modal({ title, onClose, isOpen, children }) {
     <div
       className={
         isOpen
-          ? "fixed left-0 top-0 z-10 h-screen w-full bg-gray-800/60 backdrop-blur-sm"
+          ? "fixed left-0 top-0 z-50 h-screen w-full bg-gray-800/60 backdrop-blur-sm"
           : ""
       }
     >
