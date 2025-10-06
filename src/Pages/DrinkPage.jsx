@@ -1,4 +1,10 @@
+import DrinkLayout from "../Features/Menu/Drink/DrinkLayout";
+
 function DrinkPage() {
-  return <div>DrinkPage</div>;
+  return (
+    <div>
+      <DrinkLayout />
+    </div>
+  );
 }
 export default DrinkPage;
