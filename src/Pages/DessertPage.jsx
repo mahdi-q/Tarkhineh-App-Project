@@ -1,6 +1,10 @@
+import DessertLayout from "../Features/Menu/Dessert/DessertLayout";
+
 function DessertPage() {
   return (
-    <div>DessertPage</div>
-  )
+    <div>
+      <DessertLayout />
+    </div>
+  );
 }
-export default DessertPage
+export default DessertPage;
