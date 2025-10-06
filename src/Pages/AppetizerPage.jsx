@@ -1,6 +1,10 @@
+import AppetizerLayout from "../Features/Menu/Appetizer/AppetizerLayout";
+
 function AppetizerPage() {
   return (
-    <div>AppetizerPage</div>
-  )
+    <div>
+      <AppetizerLayout />
+    </div>
+  );
 }
-export default AppetizerPage
+export default AppetizerPage;

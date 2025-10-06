@@ -3,7 +3,7 @@ import Rate from "../../UI/Rate";
 
 function MenuFoodCard({ food }) {
   return (
-    <div className="flex h-[110px] w-full rounded border border-gray-400 lg:h-[160px]">
+    <div className="flex h-[110px] w-full rounded border border-gray-400 transition-all duration-300 hover:shadow-md hover:shadow-gray-400 lg:h-[160px]">
       <div className="h-full w-[30%] min-w-[30%] overflow-hidden rounded-r">
         <img
           src={food.image}
