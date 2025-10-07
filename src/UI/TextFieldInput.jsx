@@ -9,7 +9,7 @@ function TextFieldInput({
 }) {
   return (
     <div
-      className={`${errors && errors[name] ? "border-error-200 focus-within:border-error-200 hover:border-error-200" : "border-gray-500 focus-within:border-tint-700 hover:border-tint-700"} relative min-w-52 rounded border bg-transparent px-3 pb-2 pt-5 text-sm font-light text-white transition-all duration-200 xl:min-w-64`}
+      className={`${errors && errors[name] ? "border-error-200 focus-within:border-error-200 hover:border-error-200" : "border-gray-500 focus-within:border-tint-700 hover:border-tint-700"} relative w-full min-w-52 rounded border bg-transparent px-3 pb-2 pt-5 text-sm font-light text-white transition-all duration-200 xl:min-w-64`}
     >
       <label
         htmlFor={id}
@@ -20,7 +20,7 @@ function TextFieldInput({
 
       <input
         {...register(name, validationSchema)}
-        className="min-w-52 bg-transparent xl:min-w-64"
+        className="w-full min-w-52 bg-transparent xl:min-w-64"
         type={type}
         id={id}
         name={name}
