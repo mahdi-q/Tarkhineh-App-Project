@@ -40,19 +40,21 @@ function Header({ slides }) {
               <div className="backdrop-brightness-40 h-full w-full bg-black/50">
                 <div className="flex min-h-44 flex-row flex-wrap content-end items-start justify-between pb-[50px] text-white md:min-h-60 md:px-4 md:pb-[55px] lg:min-h-80 lg:pb-[70px]">
                   {/* Next Button */}
-                  <button
-                    className={`swiper-button-prev-custom ${
-                      slides.length > 1
-                        ? "opacity-0 md:opacity-100"
-                        : "opacity-0"
-                    }`}
-                  >
-                    <HiChevronRight className="icon hover:text-primary" />
-                  </button>
+                  <div>
+                    <button
+                      className={`swiper-button-prev-custom ${
+                        slides.length > 1
+                          ? "opacity-0 md:opacity-100"
+                          : "opacity-0"
+                      }`}
+                    >
+                      <HiChevronRight className="icon hover:text-primary" />
+                    </button>
+                  </div>
 
                   {/* Image */}
                   <div className="flex flex-col items-center gap-y-4 lg:gap-y-8">
-                    <h1 className="text-center font-semibold md:text-lg md:font-bold lg:text-2xl">
+                    <h1 className="text-center font-semibold md:text-lg md:font-bold lg:text-2xl xl:text-3xl">
                       {slide.text}
                     </h1>
 
@@ -69,15 +71,17 @@ function Header({ slides }) {
                   </div>
 
                   {/* Prev Button */}
-                  <button
-                    className={`swiper-button-next-custom ${
-                      slides.length > 1
-                        ? "opacity-0 md:opacity-100"
-                        : "opacity-0"
-                    }`}
-                  >
-                    <HiChevronLeft className="icon hover:text-primary" />
-                  </button>
+                  <div>
+                    <button
+                      className={`swiper-button-next-custom ${
+                        slides.length > 1
+                          ? "opacity-0 md:opacity-100"
+                          : "opacity-0"
+                      }`}
+                    >
+                      <HiChevronLeft className="icon hover:text-primary" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
