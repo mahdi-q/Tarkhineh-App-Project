@@ -18,6 +18,7 @@ import DrinkPage from "./Pages/DrinkPage";
 import FranchisePage from "./Pages/FranchisePage";
 import AboutUsPage from "./Pages/AboutUsPage";
 import ContactUsPage from "./Pages/ContactUsPage";
+import FAQPage from "./Pages/FAQPage";
 
 function App() {
   return (
@@ -51,6 +52,8 @@ function App() {
           <Route path="about-us" element={<AboutUsPage />} />
 
           <Route path="contact-us" element={<ContactUsPage />} />
+
+          <Route path="FAQ" element={<FAQPage />} />
 
           <Route path="search-result" element={<SearchResult />} />
 

@@ -37,7 +37,7 @@ function Header({ slides }) {
               style={{ backgroundImage: `url(${slide.image})` }}
               className="relative min-h-44 w-full bg-cover bg-center transition-all duration-300 ease-in-out md:min-h-60 lg:min-h-80"
             >
-              <div className="backdrop-brightness-40 h-full w-full bg-black/50">
+              <div className="h-full w-full bg-black/40 backdrop-brightness-50">
                 <div className="flex min-h-44 flex-row flex-wrap content-end items-start justify-between pb-[50px] text-white md:min-h-60 md:px-4 md:pb-[55px] lg:min-h-80 lg:pb-[70px]">
                   {/* Next Button */}
                   <div>
