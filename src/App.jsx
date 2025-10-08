@@ -17,6 +17,7 @@ import DessertPage from "./Pages/DessertPage";
 import DrinkPage from "./Pages/DrinkPage";
 import FranchisePage from "./Pages/FranchisePage";
 import AboutUsPage from "./Pages/AboutUsPage";
+import ContactUsPage from "./Pages/ContactUsPage";
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
           <Route path="franchise" element={<FranchisePage />} />
 
           <Route path="about-us" element={<AboutUsPage />} />
+
+          <Route path="contact-us" element={<ContactUsPage />} />
 
           <Route path="search-result" element={<SearchResult />} />
 
