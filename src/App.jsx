@@ -16,6 +16,7 @@ import AppetizerPage from "./Pages/AppetizerPage";
 import DessertPage from "./Pages/DessertPage";
 import DrinkPage from "./Pages/DrinkPage";
 import FranchisePage from "./Pages/FranchisePage";
+import AboutUsPage from "./Pages/AboutUsPage";
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
           </Route>
 
           <Route path="franchise" element={<FranchisePage />} />
+
+          <Route path="about-us" element={<AboutUsPage />} />
 
           <Route path="search-result" element={<SearchResult />} />
 
