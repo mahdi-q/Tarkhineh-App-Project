@@ -17,7 +17,7 @@ function BranchCards() {
 
   return (
     <div className="container relative py-8">
-      <h2 className="mb-3 text-center font-bold text-black md:text-lg lg:mb-6 lg:text-xl">
+      <h2 className="mb-3 text-center font-bold text-black md:text-lg lg:mb-8 lg:text-xl xl:text-2xl">
         ترخینه گردی
       </h2>
 

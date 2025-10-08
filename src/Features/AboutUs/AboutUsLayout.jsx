@@ -53,25 +53,25 @@ function AboutUsLayout() {
       <div className="bg-gray-200 py-3 lg:py-8">
         <div className="container flex items-stretch justify-between">
           <div className="flex flex-1 flex-col items-center justify-stretch gap-1 border-l border-l-gray-400 text-center text-xs text-gray-700 lg:text-lg">
-            <UserIcon className="h-4 w-4 lg:h-12 lg:w-12" />
+            <UserIcon className="h-4 w-4 fill-gray-800 lg:h-12 lg:w-12" />
 
             <span className="px-2">پرسنلی مجرب و حرفه‌ای</span>
           </div>
 
           <div className="flex flex-1 flex-col items-center justify-stretch gap-1 border-l border-l-gray-400 text-center text-xs text-gray-700 lg:text-lg">
-            <DiagramIcon className="h-4 w-4 lg:h-12 lg:w-12" />
+            <DiagramIcon className="h-4 w-4 fill-gray-800 lg:h-12 lg:w-12" />
 
             <span className="px-2">کیفیت بالای غذاها</span>
           </div>
 
           <div className="flex flex-1 flex-col items-center justify-stretch gap-1 border-l border-l-gray-400 text-center text-xs text-gray-700 lg:text-lg">
-            <HomeIcon className="h-4 w-4 lg:h-12 lg:w-12" />
+            <HomeIcon className="h-4 w-4 fill-gray-800 lg:h-12 lg:w-12" />
 
             <span className="px-2">محیطی دلنشین و آرام</span>
           </div>
 
           <div className="flex flex-1 flex-col items-center justify-stretch gap-1 text-center text-xs text-gray-700 lg:text-lg">
-            <MenuBoardIcon className="h-4 w-4 lg:h-12 lg:w-12" />
+            <MenuBoardIcon className="h-4 w-4 fill-gray-800 lg:h-12 lg:w-12" />
 
             <span className="px-2">منوی متنوع</span>
           </div>

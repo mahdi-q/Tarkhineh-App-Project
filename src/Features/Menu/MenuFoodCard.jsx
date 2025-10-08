@@ -83,7 +83,7 @@ function MenuFoodCard({ food }) {
                 onClick={() => setIsModalOpen(false)}
                 className="absolute left-5 top-1/2 -translate-y-1/2"
               >
-                <CloseIcon className="h-9 w-9" />
+                <CloseIcon className="h-9 w-9 fill-gray-700" />
               </button>
             </div>
 

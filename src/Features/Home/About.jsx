@@ -1,9 +1,9 @@
-import { AiOutlineUser } from "react-icons/ai";
 import { HiChevronLeft } from "react-icons/hi2";
-import { IoRestaurantOutline } from "react-icons/io5";
-import { LuChartSpline } from "react-icons/lu";
-import { TbHomeHeart } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
+import UserIcon from "../../Icons/UserIcon";
+import DiagramIcon from "../../Icons/DiagramIcon";
+import HomeIcon from "../../Icons/HomeIcon";
+import MenuBoardIcon from "../../Icons/MenuBoardIcon";
 
 function About() {
   const aboutIconClass =
@@ -39,26 +39,26 @@ function About() {
 
           <div className="grid grid-cols-2 grid-rows-2 justify-between justify-items-center gap-x-12 gap-y-4 md:grid-cols-4 md:grid-rows-1 md:gap-x-8 lg:grid-cols-2 lg:grid-rows-2">
             <div className={aboutIconClass}>
-              <AiOutlineUser className="h-7 w-7 lg:h-9 lg:w-9" />
+              <UserIcon className="h-7 w-7 fill-white lg:h-9 lg:w-9" />
               <span className="">پرسنلی مجرب و حرفه‌ای</span>
             </div>
 
             <div className={aboutIconClass}>
-              <LuChartSpline className="h-7 w-7 lg:h-9 lg:w-9" />
+              <DiagramIcon className="h-7 w-7 fill-white lg:h-9 lg:w-9" />
               <span className="text-sm font-light lg:text-base">
                 کیفیت بالای غذاها
               </span>
             </div>
 
             <div className={aboutIconClass}>
-              <TbHomeHeart className="h-7 w-7 lg:h-9 lg:w-9" />
+              <HomeIcon className="h-7 w-7 fill-white lg:h-9 lg:w-9" />
               <span className="text-sm font-light lg:text-base">
                 محیطی دلنشین و آرام
               </span>
             </div>
 
             <div className={aboutIconClass}>
-              <IoRestaurantOutline className="h-7 w-7 lg:h-9 lg:w-9" />
+              <MenuBoardIcon className="h-7 w-7 fill-white lg:h-9 lg:w-9" />
               <span className="text-sm font-light lg:text-base">
                 منوی متنوع
               </span>

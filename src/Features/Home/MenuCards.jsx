@@ -6,7 +6,7 @@ function MenuCards() {
 
   return (
     <div className="container py-6 lg:py-12">
-      <h2 className="mb-16 text-center font-bold text-black md:mb-28 md:text-lg lg:text-xl xl:mb-40">
+      <h2 className="mb-16 text-center font-bold text-black md:mb-28 md:text-lg lg:text-xl xl:mb-40 xl:text-2xl">
         منو رستوران
       </h2>
 
