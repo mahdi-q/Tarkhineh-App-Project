@@ -1,9 +1,9 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { CiImageOn } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
 import Modal from "../../UI/Modal";
 import CloseIcon from "../../Icons/CloseIcon";
+import GalleryIcon from "../../Icons/GalleryIcon";
 
 function ContactUsCard({ branch }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +24,7 @@ function ContactUsCard({ branch }) {
         >
           <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-500/40">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-500/50">
-              <CiImageOn className="h-8 w-8 text-white" />
+              <GalleryIcon className="h-8 w-8 fill-white" />
             </div>
           </div>
         </button>

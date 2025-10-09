@@ -1,6 +1,6 @@
-import { HiChevronDown } from "react-icons/hi2";
 import CustomNavLink from "../../UI/CustomNavLink";
 import useOutsideClick from "../../Hooks/useOutsideClick";
+import ArrowLeftIcon from "../../Icons/ArrowLeftIcon";
 
 function NavbarDropDown({ state, setState, text, items, isSelected }) {
   const dropDownLinkClass =
@@ -15,8 +15,8 @@ function NavbarDropDown({ state, setState, text, items, isSelected }) {
         onClick={() => setState((is) => !is)}
       >
         <span>{text}</span>
-        <HiChevronDown
-          className={`${state ? "rotate-180" : "rotate-0"} h-4 w-4 transition-all duration-300`}
+        <ArrowLeftIcon
+          className={`${state ? "rotate-90" : "-rotate-90"} ${isSelected ? "fill-primary" : "fill-gray-800"} h-4 w-4 transition-all duration-300`}
         />
       </button>
 

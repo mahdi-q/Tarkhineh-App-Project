@@ -1,4 +1,3 @@
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -6,6 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import ArrowLeftIcon from "../Icons/ArrowLeftIcon";
 
 function Header({ slides }) {
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ function Header({ slides }) {
                           : "opacity-0"
                       }`}
                     >
-                      <HiChevronRight className="icon hover:text-primary" />
+                      <ArrowLeftIcon className="icon rotate-180 fill-white transition-all duration-200 hover:fill-primary" />
                     </button>
                   </div>
 
@@ -79,7 +79,7 @@ function Header({ slides }) {
                           : "opacity-0"
                       }`}
                     >
-                      <HiChevronLeft className="icon hover:text-primary" />
+                      <ArrowLeftIcon className="icon fill-white transition-all duration-200 hover:fill-primary" />
                     </button>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
-import { IoClose } from "react-icons/io5";
 import useOutsideClick from "../Hooks/useOutsideClick";
+import CloseIcon from "../Icons/CloseIcon";
 
 function Modal({ title, onClose, isOpen, children }) {
   const ref = useOutsideClick(onClose);
@@ -22,7 +22,7 @@ function Modal({ title, onClose, isOpen, children }) {
           <h3 className="font-semibold text-gray-800">{title}</h3>
 
           <button onClick={onClose} className="absolute left-6">
-            <IoClose className="icon text-gray-600" />
+            <CloseIcon className="icon fill-gray-600" />
           </button>
         </div>
 

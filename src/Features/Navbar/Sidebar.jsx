@@ -1,12 +1,13 @@
-import { IoCloseOutline, IoMenu } from "react-icons/io5";
 import NavbarLinks from "./NavbarLinks";
 import { Link } from "react-router-dom";
 import { useToggle } from "../../Contexts/ToggleContext";
 import useOutsideClick from "../../Hooks/useOutsideClick";
+import CloseIcon from "../../Icons/CloseIcon";
+import BarsIcon from "../../Icons/BarsIcon";
 
 function Sidebar() {
   const { isToggleOpen, setIsToggleOpen } = useToggle();
-  
+
   const ref = useOutsideClick(() => setIsToggleOpen(false));
 
   return (
@@ -19,7 +20,7 @@ function Sidebar() {
     >
       <div ref={ref}>
         <button onClick={() => setIsToggleOpen(true)}>
-          <IoMenu className="block h-6 w-6 text-primary md:hidden" />
+          <BarsIcon className="block h-6 w-6 fill-primary md:hidden" />
         </button>
 
         <div
@@ -36,7 +37,7 @@ function Sidebar() {
               </Link>
 
               <button onClick={() => setIsToggleOpen(false)}>
-                <IoCloseOutline className="absolute left-4 top-4 h-6 w-6 text-white" />
+                <CloseIcon className="absolute left-4 top-4 h-6 w-6 fill-white" />
               </button>
             </div>
           </div>

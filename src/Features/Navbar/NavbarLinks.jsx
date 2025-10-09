@@ -1,11 +1,12 @@
 import CustomNavLink from "../../UI/CustomNavLink";
-import { CgMenuBoxed } from "react-icons/cg";
-import { TbHomePlus } from "react-icons/tb";
-import { LuPhoneCall, LuUsersRound } from "react-icons/lu";
-import { GoHome } from "react-icons/go";
 import { useState } from "react";
 import NavbarDropDown from "./NavbarDropDown";
 import { useLocation } from "react-router-dom";
+import MainHomeIcon from "../../Icons/MainHomeIcon";
+import BranchIcon from "../../Icons/BranchIcon";
+import MenuBoardIcon from "../../Icons/MenuBoardIcon";
+import UsersIcon from "../../Icons/UsersIcon";
+import PhoneIcon from "../../Icons/PhoneIcon";
 
 const branches = {
   ekbatan: "اکباتان",
@@ -18,7 +19,7 @@ const menus = ["main-food", "appetizer", "dessert", "drink"];
 
 function NavbarLinks() {
   const navbarLinkClass =
-    "relative flex items-center gap-x-1 border-b border-b-gray-400 pb-2 text-sm text-gray-800 shadow-sm last:border-none last:shadow-none md:border-none md:font-medium md:text-gray-700 md:shadow-none md:hover:text-primary lg:text-base";
+    "relative flex items-center gap-x-1 border-b border-b-gray-400 pb-2 text-sm text-gray-800 last:border-none md:border-none md:font-medium md:text-gray-700 md:hover:text-primary lg:text-base";
 
   const [isOpenBranch, setIsOpenBranch] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -29,13 +30,17 @@ function NavbarLinks() {
     <ul className="flex min-w-64 flex-col gap-y-3 px-4 md:flex-row md:items-center md:gap-x-4 md:px-0 lg:gap-x-6">
       <li className={navbarLinkClass}>
         <CustomNavLink to="/">
-          <GoHome className="icon md:hidden" />
+          <MainHomeIcon
+            className={`${pathname === "/" && "fill-primary"} icon fill-gray-800 md:hidden`}
+          />
           <span>صفحه اصلی</span>
         </CustomNavLink>
       </li>
 
       <li className={navbarLinkClass}>
-        <TbHomePlus className="icon self-start md:hidden" />
+        <BranchIcon
+          className={`${pathname.includes("/branch") && "fill-primary"} icon self-start fill-gray-800 md:hidden`}
+        />
 
         <NavbarDropDown
           state={isOpenBranch}
@@ -52,7 +57,9 @@ function NavbarLinks() {
       </li>
 
       <li className={navbarLinkClass}>
-        <CgMenuBoxed className="icon mt-1 self-start md:hidden" />
+        <MenuBoardIcon
+          className={`${pathname.includes("/menu") && "fill-primary"} icon mt-1 self-start fill-gray-800 md:hidden`}
+        />
 
         <NavbarDropDown
           state={isOpenMenu}
@@ -76,14 +83,18 @@ function NavbarLinks() {
 
       <li className={navbarLinkClass}>
         <CustomNavLink to="about-us">
-          <LuUsersRound className="icon md:hidden" />
+          <UsersIcon
+            className={`${pathname === "/about-us" && "fill-primary"} icon fill-gray-800 md:hidden`}
+          />
           <span>درباره ما</span>
         </CustomNavLink>
       </li>
 
       <li className={navbarLinkClass}>
         <CustomNavLink to="contact-us">
-          <LuPhoneCall className="icon md:hidden" />
+          <PhoneIcon
+            className={`${pathname === "/contact-us" && "fill-primary"} icon fill-gray-800 md:hidden`}
+          />
           <span>تماس با ما</span>
         </CustomNavLink>
       </li>

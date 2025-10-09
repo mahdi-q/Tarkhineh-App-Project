@@ -1,5 +1,5 @@
-import { FaArrowLeft } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import ArrowLeftIcon from "../Icons/ArrowLeftIcon";
 
 function NotFoundPage() {
   const navigate = useNavigate();
@@ -14,11 +14,11 @@ function NotFoundPage() {
 
       <button
         onClick={() => navigate(-1)}
-        className="primary-button flex flex-row items-center gap-x-2 border border-primary"
+        className="primary-button group flex flex-row items-center gap-x-2 border border-primary"
       >
         <span className="text-base font-normal">بازگشت</span>
 
-        <FaArrowLeft className="icon" />
+        <ArrowLeftIcon className="icon fill-white transition-all duration-200 group-hover:fill-primary" />
       </button>
     </div>
   );

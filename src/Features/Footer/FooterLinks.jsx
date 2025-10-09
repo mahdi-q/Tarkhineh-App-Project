@@ -1,7 +1,7 @@
-import { FaInstagram } from "react-icons/fa";
-import { PiTelegramLogoLight } from "react-icons/pi";
-import { TfiTwitter } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import TwitterIcon from "../../Icons/TwitterIcon";
+import InstagramIcon from "../../Icons/InstagramIcon";
+import TelegramIcon from "../../Icons/TelegramIcon";
 
 const access = [
   { title: "پرسش های متداول", link: "FAQ" },
@@ -36,19 +36,19 @@ function FooterLinks() {
             <ul className="flex items-center gap-x-3 lg:gap-x-6">
               <li>
                 <Link target="_blank" to="https://x.com/">
-                  <TfiTwitter className="icon transition-all duration-200 hover:text-tint-600" />
+                  <TwitterIcon className="icon fill-white transition-all duration-200 hover:fill-tint-600" />
                 </Link>
               </li>
 
               <li>
                 <Link target="_blank" to="https://instagram.com/">
-                  <FaInstagram className="icon transition-all duration-200 hover:text-tint-600" />
+                  <InstagramIcon className="icon fill-white transition-all duration-200 hover:fill-tint-600" />
                 </Link>
               </li>
 
               <li>
                 <Link target="_blank" to="https://telegram.org/">
-                  <PiTelegramLogoLight className="icon transition-all duration-200 hover:text-tint-600" />
+                  <TelegramIcon className="icon fill-white transition-all duration-200 hover:fill-tint-600" />
                 </Link>
               </li>
             </ul>

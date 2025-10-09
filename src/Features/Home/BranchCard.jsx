@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { CiImageOn } from "react-icons/ci";
-import { FaExpand } from "react-icons/fa";
-import { HiChevronLeft } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
-import { IoClose } from "react-icons/io5";
 import Modal from "../../UI/Modal";
+import CloseIcon from "../../Icons/CloseIcon";
+import ArrowLeftIcon from "../../Icons/ArrowLeftIcon";
+import ExpandIcon from "../../Icons/ExpandIcon";
+import GalleryIcon from "../../Icons/GalleryIcon";
 
 function BranchCard({ branch }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,7 +35,7 @@ function BranchCard({ branch }) {
           >
             <span>صفحه شعبه</span>
 
-            <HiChevronLeft />
+            <ArrowLeftIcon className="h-4 w-4 fill-gray-600 lg:fill-primary" />
           </button>
         </div>
 
@@ -43,7 +43,7 @@ function BranchCard({ branch }) {
           onClick={() => setIsModalOpen(true)}
           className="absolute bottom-2 right-2 text-white lg:hidden"
         >
-          <FaExpand className="h-5 w-5" />
+          <ExpandIcon className="h-5 w-5" />
         </button>
 
         <button
@@ -52,7 +52,7 @@ function BranchCard({ branch }) {
         >
           <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-500/40">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-500/50">
-              <CiImageOn className="h-8 w-8 text-white" />
+              <GalleryIcon className="h-8 w-8 fill-white" />
             </div>
           </div>
         </button>
@@ -69,7 +69,7 @@ function BranchCard({ branch }) {
           onClick={() => setIsModalOpen(false)}
           className="absolute left-3 top-3 text-white"
         >
-          <IoClose className="h-6 w-6 xl:h-8 xl:w-8" />
+          <CloseIcon className="h-6 w-6 fill-white xl:h-8 xl:w-8" />
         </button>
       </Modal>
     </div>

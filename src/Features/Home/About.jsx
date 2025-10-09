@@ -1,9 +1,9 @@
-import { HiChevronLeft } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
 import UserIcon from "../../Icons/UserIcon";
 import DiagramIcon from "../../Icons/DiagramIcon";
 import HomeIcon from "../../Icons/HomeIcon";
 import MenuBoardIcon from "../../Icons/MenuBoardIcon";
+import ArrowLeftIcon from "../../Icons/ArrowLeftIcon";
 
 function About() {
   const aboutIconClass =
@@ -30,10 +30,10 @@ function About() {
 
             <button
               onClick={() => navigate("/about-us")}
-              className="outline-button self-end"
+              className="outline-button group self-end"
             >
               <span>اطلاعات بیشتر</span>
-              <HiChevronLeft className="icon" />
+              <ArrowLeftIcon className="icon fill-white transition-all duration-200 group-hover:fill-primary" />
             </button>
           </div>
 
