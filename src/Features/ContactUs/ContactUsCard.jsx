@@ -10,12 +10,12 @@ function ContactUsCard({ branch }) {
   const navigate = useNavigate();
 
   return (
-    <div className="group relative flex w-full flex-col items-center justify-stretch rounded border border-gray-400 lg:flex-row">
+    <div className="group relative flex w-full flex-col items-center justify-stretch rounded border border-gray-400 lg:flex-row lg:hover:shadow-md">
       <div className="relative h-[112px] w-full shrink-0 overflow-hidden rounded-t md:h-[182px] lg:h-[280px] lg:w-[400px] lg:rounded-r lg:rounded-tl-none xl:w-[600px]">
         <img
           src={branch.image}
           alt={branch.name}
-          className="h-full w-full object-cover transition-all duration-300 group-hover:brightness-50"
+          className="h-full w-full object-cover transition-all duration-300 lg:group-hover:brightness-50"
         />
 
         <button
@@ -52,17 +52,17 @@ function ContactUsCard({ branch }) {
           </div>
         </div>
 
-        <div className="flex w-full items-center justify-between gap-4 opacity-0 transition-all duration-300 group-hover:opacity-100 lg:justify-center lg:gap-5">
+        <div className="flex w-full items-center justify-between gap-4 transition-all duration-300 lg:justify-center lg:gap-5 lg:opacity-0 lg:group-hover:opacity-100">
           <button
             onClick={() => navigate(`/branch/${branch.name}`)}
-            className="outline-primary-button w-full lg:w-auto lg:px-6"
+            className="primary-button w-full text-xs lg:w-auto lg:text-base"
           >
             صفحه شعبه
           </button>
 
           <button
             onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
-            className="primary-button w-full text-xs lg:w-auto lg:text-base"
+            className="outline-primary-button w-full lg:w-auto lg:px-6"
           >
             دیدن در نقشه
           </button>
