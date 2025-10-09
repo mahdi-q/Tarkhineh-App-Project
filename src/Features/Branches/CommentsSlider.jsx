@@ -35,7 +35,7 @@ function CommentsSlider({ comments }) {
 
             {comments.map((comment) => (
               <SwiperSlide key={comment.id} className="flex-1">
-                <div className="flex w-[272px] items-center justify-between gap-2 rounded border border-gray-400 px-4 py-5 md:w-[400px] lg:w-[600px] lg:gap-3 lg:rounded-lg lg:px-8 lg:py-6">
+                <div className="scroll-none flex h-[190px] w-[272px] items-center justify-between gap-2 overflow-auto rounded border border-gray-400 px-4 py-5 md:w-[400px] lg:h-[230px] lg:w-[600px] lg:gap-3 lg:rounded-lg lg:px-8 lg:py-6">
                   <div className="flex flex-col items-center justify-center gap-1 lg:gap-2">
                     <div className="h-14 w-14 overflow-hidden rounded-full lg:h-24 lg:w-24">
                       <img

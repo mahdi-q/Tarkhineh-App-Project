@@ -17,14 +17,14 @@ function FoodCard({ food }) {
   };
 
   return (
-    <div className="!h-full w-[198px] rounded border border-gray-400 bg-white transition-all duration-300 ease-in-out hover:scale-[1.02] hover:border-primary hover:shadow-sm hover:shadow-tint-200 lg:w-[288px] lg:rounded-lg">
+    <div className="flex w-[198px] flex-col justify-between rounded border border-gray-400 bg-white transition-all duration-300 ease-in-out hover:scale-[1.02] hover:border-primary hover:shadow-sm hover:shadow-tint-200 lg:h-[436px] lg:w-[288px] lg:rounded-lg">
       <img
         className="h-[120px] w-full rounded-t object-cover lg:h-[256px] lg:rounded-t-lg"
         src={image}
         alt={title}
       />
 
-      <div className="flex flex-col items-center justify-between p-2 lg:p-4">
+      <div className="flex flex-1 flex-col items-center justify-between p-2 lg:p-4">
         <h4 className="mb-1 font-medium lg:mb-2 lg:text-lg lg:font-semibold">
           {title}
         </h4>

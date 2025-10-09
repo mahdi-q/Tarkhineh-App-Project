@@ -20,7 +20,7 @@ function BranchInfo({ title, image, phone_numberes, location, work_time }) {
       {/* Branch Info */}
       <div className="absolute -bottom-10 grid grid-cols-2 gap-2 rounded border border-primary bg-white p-2 text-gray-800 md:px-4 lg:-bottom-20 lg:grid-cols-3 lg:gap-8 lg:rounded-lg lg:border-2 lg:px-12 lg:py-4">
         <div className="flex items-center gap-1 text-center text-xs leading-[1.8] md:text-sm lg:w-[210px] lg:flex-col lg:gap-2 lg:text-base">
-          <PhoneIcon className="h-4 w-4 md:h-6 md:w-6 lg:h-8 lg:w-8" />
+          <PhoneIcon className="h-4 w-4 fill-gray-800 md:h-6 md:w-6 lg:h-8 lg:w-8" />
 
           <div>
             <span className="hidden lg:block">{phone_numberes.desktop_1}</span>
