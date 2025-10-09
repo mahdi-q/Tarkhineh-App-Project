@@ -73,7 +73,7 @@ function MenuFoodCard({ food }) {
         <div className="flex items-center justify-between gap-1 lg:gap-6">
           <button onClick={likeHandler} className="lg:hidden">
             {isLiked ? (
-              <HeartFillIcon className="h-6 w-6 fill-error-200" />
+              <HeartFillIcon className="h-4 w-4 fill-error-200" />
             ) : (
               <HeartIcon className="h-4 w-4 fill-gray-800 transition-all duration-200 hover:fill-error-200" />
             )}
