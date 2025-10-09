@@ -68,12 +68,12 @@ const ITEMS = [
 
 function FAQLayout() {
   return (
-    <div>
+    <div className="minimum-height">
       <Header slides={SLIDES} />
 
       <LinksSection links={LINKS} />
 
-      <div className="container min-h-[50vh]">
+      <div className="container">
         <Accordion items={ITEMS} />
       </div>
     </div>

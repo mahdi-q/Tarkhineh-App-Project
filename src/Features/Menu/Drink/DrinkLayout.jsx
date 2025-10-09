@@ -111,7 +111,7 @@ function DrinkLayout() {
   }, [drink, category, sort, isFiltered, search]);
 
   return (
-    <div className="min-h-screen">
+    <div className="minimum-height">
       <FilterSection filters={FILTERS} />
 
       <div className="container mx-auto mb-6 lg:mb-12">

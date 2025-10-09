@@ -83,12 +83,12 @@ URL مرجع شما (سایتی که شما برای دسترسی و ورود ب
 
 function PrivacyLayout() {
   return (
-    <div>
+    <div className="minimum-height">
       <Header slides={SLIDES} />
 
       <LinksSection links={LINKS} />
 
-      <div className="container min-h-[50vh]">
+      <div className="container">
         <Accordion items={ITEMS} />
       </div>
     </div>

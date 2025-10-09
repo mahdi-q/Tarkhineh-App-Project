@@ -15,7 +15,7 @@ const slides = [
 
 function FranchiseLayout() {
   return (
-    <div className="min-h-screen">
+    <div className="minimum-height">
       <Header slides={slides} />
 
       <div className="container">

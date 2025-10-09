@@ -47,7 +47,7 @@ function HomeLayout() {
   const [searchValue, setSearchValue] = useState("");
 
   return (
-    <div>
+    <div className="minimum-height">
       <Header slides={slides} />
 
       <div className="lg:hidden">

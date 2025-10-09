@@ -54,13 +54,13 @@ function ChalosLayout() {
     chalosBranch.special_foods.length <= 0
   )
     return (
-      <div className="flex h-[60vh] animate-pulse items-center justify-center font-bold lg:text-lg">
+      <div className="minimum-height flex animate-pulse items-center justify-center font-bold lg:text-lg">
         در حال بارگذاری اطلاعات ...
       </div>
     );
 
   return (
-    <div>
+    <div className="minimum-height">
       <Header slides={slides} />
 
       <div className="lg:hidden">
