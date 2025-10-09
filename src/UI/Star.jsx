@@ -1,6 +1,6 @@
 function Star({ rate }) {
   switch (rate) {
-    case "۰": {
+    case "0": {
       return (
         <svg
           width="16"
@@ -17,7 +17,7 @@ function Star({ rate }) {
       );
     }
 
-    case "۱": {
+    case "1": {
       return (
         <svg
           width="16"
@@ -50,7 +50,7 @@ function Star({ rate }) {
       );
     }
 
-    case "۲": {
+    case "2": {
       return (
         <svg
           width="16"
@@ -83,7 +83,7 @@ function Star({ rate }) {
       );
     }
 
-    case "۳": {
+    case "3": {
       return (
         <svg
           width="16"
@@ -116,7 +116,7 @@ function Star({ rate }) {
       );
     }
 
-    case "۴": {
+    case "4": {
       return (
         <svg
           width="16"
@@ -149,7 +149,7 @@ function Star({ rate }) {
       );
     }
 
-    case "۵": {
+    case "5": {
       return (
         <svg
           width="16"

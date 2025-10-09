@@ -3,6 +3,7 @@ import HeartIcon from "../../Icons/HeartIcon";
 import Rate from "../../UI/Rate";
 import Modal from "../../UI/Modal";
 import CloseIcon from "../../Icons/CloseIcon";
+import toast from "react-hot-toast";
 
 function MenuFoodCard({ food }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,8 +36,11 @@ function MenuFoodCard({ food }) {
           </div>
 
           <div className="flex flex-col items-end justify-between gap-1">
-            <button className="hidden lg:block">
-              <HeartIcon className="h-6 w-6 transition-all duration-200 hover:stroke-error-200" />
+            <button
+              onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
+              className="hidden lg:block"
+            >
+              <HeartIcon className="h-6 w-6 fill-gray-800 transition-all duration-200 hover:fill-error-200" />
             </button>
 
             {food.discount ? (
@@ -58,13 +62,19 @@ function MenuFoodCard({ food }) {
         </div>
 
         <div className="flex items-center justify-between gap-1 lg:gap-6">
-          <button className="lg:hidden">
-            <HeartIcon className="h-4 w-4 transition-all duration-200 hover:stroke-error-200" />
+          <button
+            onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
+            className="lg:hidden"
+          >
+            <HeartIcon className="h-4 w-4 fill-gray-800 transition-all duration-200 hover:fill-error-200" />
           </button>
 
           <Rate rate={food.rate} />
 
-          <button className="primary-button flex-1 p-2 text-xs lg:text-base lg:font-medium">
+          <button
+            onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
+            className="primary-button flex-1 p-2 text-xs lg:text-base lg:font-medium"
+          >
             افزودن به سبد خرید
           </button>
         </div>

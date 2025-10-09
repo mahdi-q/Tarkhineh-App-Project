@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
+import { toEnglishNumbersWithoutComma } from "../../Utils/formatNumber";
+import Star from "../../UI/Star";
 
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import Star from "../../UI/Star";
 
 function CommentsSlider({ comments }) {
   return (
@@ -61,7 +62,7 @@ function CommentsSlider({ comments }) {
                     </p>
 
                     <div className="flex items-center gap-1 self-end text-xs lg:text-base">
-                      <Star rate={comment.rate} />
+                      <Star rate={toEnglishNumbersWithoutComma(comment.rate)} />
 
                       <span>{comment.rate}</span>
                     </div>

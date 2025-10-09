@@ -68,7 +68,7 @@ function FilterSection({ filters }) {
                 className={`flex cursor-pointer items-center gap-1 text-nowrap rounded-lg border border-gray-200 bg-gray-200 p-2 text-xs transition-all duration-200 hover:border-gray-400 lg:rounded-2xl lg:text-sm ${item.value === category || item.value === sort ? "border-primary !bg-primary fill-white stroke-white text-white" : ""}`}
               >
                 <span>{item.label}</span>
-                <ArrowLeftIcon className="h-3 w-3 lg:h-4 lg:w-4" />
+                <ArrowLeftIcon className="h-3 w-3 fill-gray-800 lg:h-4 lg:w-4" />
               </div>
             </SwiperSlide>
           ))}

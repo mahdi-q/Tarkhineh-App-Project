@@ -1,5 +1,7 @@
-import { GoHeart } from "react-icons/go";
 import Star from "./Star";
+import HeartIcon from "../Icons/HeartIcon";
+import toast from "react-hot-toast";
+import { toEnglishNumbersWithoutComma } from "../Utils/formatNumber";
 
 function FoodCard({ food }) {
   const { image, title, main_price, discount, price, rate, score } = food;
@@ -19,19 +21,22 @@ function FoodCard({ food }) {
 
         <div className="flow-row mb-2 flex w-full items-stretch justify-between lg:mb-4">
           <div className="space-y-1 lg:space-y-2">
-            <div className="flow-row flex items-center gap-1 text-gray-500">
+            <button
+              onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
+              className="flow-row group flex items-center gap-1 text-gray-500"
+            >
               <span>
-                <GoHeart className="h-4 w-4" />
+                <HeartIcon className="h-4 w-4 fill-gray-800 transition-all duration-200 group-hover:fill-error-200" />
               </span>
 
               <span className="hidden text-xs lg:inline-block">
                 افزودن به علاقمندی‌ها
               </span>
-            </div>
+            </button>
 
             <div className="flow-row flex items-center gap-1 text-sm">
               <span>
-                <Star rate={rate} />
+                <Star rate={toEnglishNumbersWithoutComma(rate)} />
               </span>
 
               <span>{rate}</span>
@@ -59,7 +64,12 @@ function FoodCard({ food }) {
           </div>
         </div>
 
-        <button className="primary-button w-full">افزودن به سبد خرید</button>
+        <button
+          onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
+          className="primary-button w-full"
+        >
+          افزودن به سبد خرید
+        </button>
       </div>
     </div>
   );
