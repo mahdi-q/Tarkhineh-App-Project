@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { CiSearch } from "react-icons/ci";
 import {
   createSearchParams,
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
+import SearchIcon from "../Icons/SearchIcon";
 
 function SearchBar({
   searchValue,
@@ -44,7 +44,7 @@ function SearchBar({
     >
       <input
         placeholder="جستجو"
-        className="w-full text-sm text-gray-800 placeholder:text-gray-800"
+        className="w-full bg-transparent text-sm text-gray-800 placeholder:text-gray-800"
         type="text"
         value={searchValue}
         onChange={onChange}
@@ -54,7 +54,7 @@ function SearchBar({
       />
 
       <button onClick={onSearch}>
-        <CiSearch className="icon" />
+        <SearchIcon className="icon fill-gray-800" />
       </button>
     </div>
   );

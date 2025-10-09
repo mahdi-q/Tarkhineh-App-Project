@@ -1,7 +1,7 @@
-import { CiSearch } from "react-icons/ci";
 import Modal from "../../UI/Modal";
 import SearchBar from "../../UI/SearchBar";
 import { useState } from "react";
+import SearchIcon from "../../Icons/SearchIcon";
 
 function SearchBtn() {
   const [searchValue, setSearchValue] = useState("");
@@ -11,9 +11,9 @@ function SearchBtn() {
     <div>
       <button
         onClick={() => setIsSearchOpen(true)}
-        className="hidden rounded bg-tint-100 p-1 lg:block"
+        className="hidden rounded bg-tint-100 p-2 lg:block"
       >
-        <CiSearch className="icon text-primary" />
+        <SearchIcon className="icon fill-primary" />
       </button>
 
       <Modal
