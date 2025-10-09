@@ -40,7 +40,7 @@ function AccordionItem({ item }) {
         </div>
 
         <p
-          className={`${isOpen ? "block" : "hidden"} mt-2 px-3 text-xs leading-loose text-gray-700 transition-all duration-200 lg:mt-5 lg:text-base`}
+          className={`${isOpen ? "block" : "hidden"} mt-2 whitespace-pre-line px-3 text-xs leading-loose text-gray-700 transition-all duration-200 lg:mt-5 lg:text-base`}
         >
           {item.description}
         </p>

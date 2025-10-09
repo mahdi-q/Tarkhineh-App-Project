@@ -20,6 +20,7 @@ import AboutUsPage from "./Pages/AboutUsPage";
 import ContactUsPage from "./Pages/ContactUsPage";
 import FAQPage from "./Pages/FAQPage";
 import RulesPage from "./Pages/RulesPage";
+import PrivacyPage from "./Pages/PrivacyPage";
 
 function App() {
   return (
@@ -57,6 +58,8 @@ function App() {
           <Route path="FAQ" element={<FAQPage />} />
 
           <Route path="rules" element={<RulesPage />} />
+
+          <Route path="privacy" element={<PrivacyPage />} />
 
           <Route path="search-result" element={<SearchResult />} />
 
