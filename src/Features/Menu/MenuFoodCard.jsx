@@ -4,9 +4,17 @@ import Rate from "../../UI/Rate";
 import Modal from "../../UI/Modal";
 import CloseIcon from "../../Icons/CloseIcon";
 import toast from "react-hot-toast";
+import HeartFillIcon from "../../Icons/HeartFillIcon";
 
 function MenuFoodCard({ food }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const likeHandler = () => {
+    if (isLiked) toast.success("از لیست علاقمندی‌ها حذف شد.");
+    if (!isLiked) toast.success("به لیست علاقمندی‌ها افزوده شد.");
+    setIsLiked((is) => !is);
+  };
 
   return (
     <div className="flex h-[110px] w-full rounded border border-gray-400 transition-all duration-300 hover:shadow-md hover:shadow-gray-400 lg:h-[160px]">
@@ -36,11 +44,12 @@ function MenuFoodCard({ food }) {
           </div>
 
           <div className="flex flex-col items-end justify-between gap-1">
-            <button
-              onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
-              className="hidden lg:block"
-            >
-              <HeartIcon className="h-6 w-6 fill-gray-800 transition-all duration-200 hover:fill-error-200" />
+            <button onClick={likeHandler} className="hidden lg:block">
+              {isLiked ? (
+                <HeartFillIcon className="h-6 w-6 fill-error-200" />
+              ) : (
+                <HeartIcon className="h-6 w-6 fill-gray-800 transition-all duration-200 hover:fill-error-200" />
+              )}
             </button>
 
             {food.discount ? (
@@ -62,11 +71,12 @@ function MenuFoodCard({ food }) {
         </div>
 
         <div className="flex items-center justify-between gap-1 lg:gap-6">
-          <button
-            onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
-            className="lg:hidden"
-          >
-            <HeartIcon className="h-4 w-4 fill-gray-800 transition-all duration-200 hover:fill-error-200" />
+          <button onClick={likeHandler} className="lg:hidden">
+            {isLiked ? (
+              <HeartFillIcon className="h-6 w-6 fill-error-200" />
+            ) : (
+              <HeartIcon className="h-4 w-4 fill-gray-800 transition-all duration-200 hover:fill-error-200" />
+            )}
           </button>
 
           <Rate rate={food.rate} />

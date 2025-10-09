@@ -2,9 +2,19 @@ import Star from "./Star";
 import HeartIcon from "../Icons/HeartIcon";
 import toast from "react-hot-toast";
 import { toEnglishNumbersWithoutComma } from "../Utils/formatNumber";
+import { useState } from "react";
+import HeartFillIcon from "../Icons/HeartFillIcon";
 
 function FoodCard({ food }) {
   const { image, title, main_price, discount, price, rate, score } = food;
+
+  const [isLiked, setIsLiked] = useState(false);
+
+  const likeHandler = () => {
+    if (isLiked) toast.success("از لیست علاقمندی‌ها حذف شد.");
+    if (!isLiked) toast.success("به لیست علاقمندی‌ها افزوده شد.");
+    setIsLiked((is) => !is);
+  };
 
   return (
     <div className="!h-full w-[198px] rounded border border-gray-400 bg-white transition-all duration-300 ease-in-out hover:scale-[1.02] hover:border-primary hover:shadow-sm hover:shadow-tint-200 lg:w-[288px] lg:rounded-lg">
@@ -22,15 +32,19 @@ function FoodCard({ food }) {
         <div className="flow-row mb-2 flex w-full items-stretch justify-between lg:mb-4">
           <div className="space-y-1 lg:space-y-2">
             <button
-              onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
+              onClick={likeHandler}
               className="flow-row group flex items-center gap-1 text-gray-500"
             >
               <span>
-                <HeartIcon className="h-4 w-4 fill-gray-800 transition-all duration-200 group-hover:fill-error-200" />
+                {isLiked ? (
+                  <HeartFillIcon className="h-4 w-4 fill-error-200" />
+                ) : (
+                  <HeartIcon className="h-4 w-4 fill-gray-800 transition-all duration-200 group-hover:fill-error-200" />
+                )}
               </span>
 
               <span className="hidden text-xs lg:inline-block">
-                افزودن به علاقمندی‌ها
+                {isLiked ? "حذف از علاقمندی‌ها" : "افزودن به علاقمندی‌ها"}
               </span>
             </button>
 
