@@ -5,6 +5,7 @@ import FilterSection from "../FilterSection";
 import MenuFoodCard from "../MenuFoodCard";
 import { useEffect, useState } from "react";
 import { toEnglishNumbersWithoutComma } from "../../../Utils/formatNumber";
+import toast from "react-hot-toast";
 
 const FILTERS = [
   {
@@ -121,7 +122,10 @@ function MainFoodLayout() {
                 لیست غذاها ({result?.length || 0})
               </h2>
 
-              <button className="outline-primary-button lg:px-4">
+              <button
+                onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
+                className="outline-primary-button lg:px-4"
+              >
                 <CartIcon className="h-4 w-4 lg:h-6 lg:w-6" />
 
                 <span className="text-sm lg:text-base lg:font-medium">
@@ -150,7 +154,10 @@ function MainFoodLayout() {
                   غذاهای ایرانی
                 </h2>
 
-                <button className="outline-primary-button lg:px-4">
+                <button
+                  onClick={() => toast.error("این بخش بزودی توسعه داده میشود.")}
+                  className="outline-primary-button lg:px-4"
+                >
                   <CartIcon className="h-4 w-4 lg:h-6 lg:w-6" />
 
                   <span className="text-sm lg:text-base lg:font-medium">
