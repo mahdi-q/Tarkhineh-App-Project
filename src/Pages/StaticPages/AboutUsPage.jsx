@@ -1,4 +1,4 @@
-import AboutUsLayout from "../Features/AboutUs/AboutUsLayout";
+import AboutUsLayout from "../../Features/AboutUs/AboutUsLayout";
 
 function AboutUsPage() {
   return (

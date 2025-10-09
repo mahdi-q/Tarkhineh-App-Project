@@ -1,4 +1,4 @@
-import DrinkLayout from "../Features/Menu/Drink/DrinkLayout";
+import DrinkLayout from "../../Features/Menu/Drink/DrinkLayout";
 
 function DrinkPage() {
   return (

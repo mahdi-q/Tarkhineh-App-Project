@@ -1,4 +1,4 @@
-import MainFoodLayout from "../Features/Menu/MainFood/MainFoodLayout";
+import MainFoodLayout from "../../Features/Menu/MainFood/MainFoodLayout";
 
 function MainFoodPage() {
   return (

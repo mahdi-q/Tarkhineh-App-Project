@@ -1,4 +1,4 @@
-import FAQLayout from "../Features/FAQ/FAQLayout";
+import FAQLayout from "../../Features/FAQ/FAQLayout";
 
 function FAQPage() {
   return (

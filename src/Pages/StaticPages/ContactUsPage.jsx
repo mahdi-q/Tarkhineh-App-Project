@@ -1,4 +1,4 @@
-import ContactUsLayout from "../Features/ContactUs/ContactUsLayout";
+import ContactUsLayout from "../../Features/ContactUs/ContactUsLayout";
 
 function ContactUsPage() {
   return (

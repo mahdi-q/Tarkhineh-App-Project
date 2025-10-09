@@ -4,7 +4,7 @@ import { useMenu } from "../Contexts/MenuContext";
 import SearchBar from "../UI/SearchBar";
 import FoodCard from "../UI/FoodCard";
 
-function SearchResult() {
+function SearchResultPage() {
   const [searchValue, setSearchValue] = useState("");
   const [result, setResult] = useState([]);
 
@@ -63,4 +63,4 @@ function SearchResult() {
     </div>
   );
 }
-export default SearchResult;
+export default SearchResultPage;

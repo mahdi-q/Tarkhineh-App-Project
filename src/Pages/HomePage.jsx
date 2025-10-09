@@ -1,10 +1,10 @@
 import HomeLayout from "../Features/Home/HomeLayout";
 
-function Home() {
+function HomePage() {
   return (
     <div>
       <HomeLayout />
     </div>
   );
 }
-export default Home;
+export default HomePage;

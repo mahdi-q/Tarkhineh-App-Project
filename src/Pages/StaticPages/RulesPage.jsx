@@ -1,4 +1,4 @@
-import RulesLayout from "../Features/Rules/RulesLayout";
+import RulesLayout from "../../Features/Rules/RulesLayout";
 
 function RulesPage() {
   return (

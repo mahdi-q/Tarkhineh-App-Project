@@ -1,4 +1,4 @@
-import DessertLayout from "../Features/Menu/Dessert/DessertLayout";
+import DessertLayout from "../../Features/Menu/Dessert/DessertLayout";
 
 function DessertPage() {
   return (

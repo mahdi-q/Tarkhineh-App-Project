@@ -1,4 +1,4 @@
-import PrivacyLayout from "../Features/Privacy/PrivacyLayout";
+import PrivacyLayout from "../../Features/Privacy/PrivacyLayout";
 
 function PrivacyPage() {
   return (

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Header from "../UI/Header";
-import LinksSection from "../UI/LinksSection";
+import Header from "../../UI/Header";
+import LinksSection from "../../UI/LinksSection";
 
 const SLIDES = [
   {
