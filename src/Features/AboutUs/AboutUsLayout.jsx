@@ -15,7 +15,7 @@ const slides = [
 
 function AboutUsLayout() {
   return (
-    <div className="minimum-height">
+    <div className="minimum-height flex flex-col justify-between">
       <Header slides={slides} />
 
       <div className="container py-12 lg:px-8">
