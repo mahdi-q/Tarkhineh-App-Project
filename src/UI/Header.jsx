@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import ArrowLeftIcon from "../Icons/ArrowLeftIcon";
+import HeaderPagination from "../Icons/HeaderPagination";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import ArrowLeftIcon from "../Icons/ArrowLeftIcon";
 
 function Header({ slides }) {
   const navigate = useNavigate();
@@ -93,7 +94,15 @@ function Header({ slides }) {
       <div
         className={`${
           slides.length > 1 ? "opacity-100" : "opacity-0"
-        } swiper-pagination-custom absolute !bottom-0 !left-1/2 z-20 flex !w-fit !-translate-x-1/2 transform items-center justify-center gap-x-2 rounded-t-xl bg-white px-4 py-2 md:px-6`}
+        } absolute bottom-0 left-1/2 z-10 -translate-x-1/2`}
+      >
+        <HeaderPagination />
+      </div>
+
+      <div
+        className={`${
+          slides.length > 1 ? "opacity-100" : "opacity-0"
+        } swiper-pagination-custom absolute !bottom-0 !left-1/2 z-20 flex !w-fit !-translate-x-1/2 transform items-center justify-center gap-x-2 rounded-t-xl px-4 py-2 md:px-6`}
       />
     </div>
   );
