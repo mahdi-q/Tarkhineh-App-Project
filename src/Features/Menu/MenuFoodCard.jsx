@@ -24,8 +24,9 @@ function MenuFoodCard({ food }) {
         className="h-full w-[30%] min-w-[30%] cursor-pointer overflow-hidden rounded-r"
       >
         <img
-          src={food.image}
+          src={`https://tarkhineh-app-project.vercel.app/_vercel/image?url=${encodeURIComponent(food.image)}&w=400&q=75`}
           alt={food.title}
+          loading="lazy"
           className="h-full w-full object-cover"
         />
       </div>
