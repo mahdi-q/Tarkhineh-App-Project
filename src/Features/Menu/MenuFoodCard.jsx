@@ -16,6 +16,13 @@ function MenuFoodCard({ food }) {
     setIsLiked((is) => !is);
   };
 
+  // helper function
+  const makeImageKitUrl = (rawUrl, width = 400, quality = 75) => {
+    const IK_BASE = "https://ik.imagekit.io/mahdi84q/tarkhineh";
+    const TRANSFORM = `tr:w-${width},q-${quality}`;
+    return `${IK_BASE}/${TRANSFORM}/${rawUrl}`;
+  };
+
   return (
     <div className="flex h-[110px] w-full rounded border border-gray-400 transition-all duration-300 hover:shadow-md hover:shadow-gray-400 lg:h-[160px]">
       {/* Card Image */}
@@ -24,7 +31,7 @@ function MenuFoodCard({ food }) {
         className="h-full w-[30%] min-w-[30%] cursor-pointer overflow-hidden rounded-r"
       >
         <img
-          src={`https://tarkhineh-app-project.vercel.app/_vercel/image?url=${encodeURIComponent(food.image)}&w=400&q=75`}
+          src={makeImageKitUrl(food.image, 400, 75)}
           alt={food.title}
           loading="lazy"
           className="h-full w-full object-cover"
