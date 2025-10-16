@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { toEnglishNumbersWithoutComma } from "../Utils/formatNumber";
 import { useState } from "react";
 import HeartFillIcon from "../Icons/HeartFillIcon";
+import makeImageKitUrl from "../Utils/makeImageKitUrl";
 
 function FoodCard({ food }) {
   const { image, title, main_price, discount, price, rate, score } = food;
@@ -20,7 +21,8 @@ function FoodCard({ food }) {
     <div className="flex w-[198px] flex-col justify-between rounded border border-gray-400 bg-white transition-all duration-300 ease-in-out hover:scale-[1.02] hover:border-primary hover:shadow-sm hover:shadow-tint-200 lg:h-[436px] lg:w-[288px] lg:rounded-lg">
       <img
         className="h-[120px] w-full rounded-t object-cover lg:h-[256px] lg:rounded-t-lg"
-        src={image}
+        src={makeImageKitUrl(image, 400, 75)}
+        loading="lazy"
         alt={title}
       />
 

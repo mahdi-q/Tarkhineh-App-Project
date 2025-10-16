@@ -5,6 +5,7 @@ import Modal from "../../UI/Modal";
 import CloseIcon from "../../Icons/CloseIcon";
 import toast from "react-hot-toast";
 import HeartFillIcon from "../../Icons/HeartFillIcon";
+import makeImageKitUrl from "../../Utils/makeImageKitUrl";
 
 function MenuFoodCard({ food }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,13 +15,6 @@ function MenuFoodCard({ food }) {
     if (isLiked) toast.success("از لیست علاقمندی‌ها حذف شد.");
     if (!isLiked) toast.success("به لیست علاقمندی‌ها افزوده شد.");
     setIsLiked((is) => !is);
-  };
-
-  // helper function
-  const makeImageKitUrl = (rawUrl, width = 400, quality = 75) => {
-    const IK_BASE = "https://ik.imagekit.io/mahdi84q/tarkhineh";
-    const TRANSFORM = `tr:w-${width},q-${quality}`;
-    return `${IK_BASE}/${TRANSFORM}/${rawUrl}`;
   };
 
   return (
@@ -117,7 +111,7 @@ function MenuFoodCard({ food }) {
 
             <div className="h-[400px] w-full overflow-hidden">
               <img
-                src={food.image}
+                src={makeImageKitUrl(food.image, 400, 75)}
                 alt={food.title}
                 className="h-full w-full object-cover"
               />
