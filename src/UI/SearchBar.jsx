@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import {
   createSearchParams,
+  useLocation,
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
@@ -9,26 +10,33 @@ import SearchIcon from "../Icons/SearchIcon";
 function SearchBar({
   searchValue,
   setSearchValue,
-  pathname = "",
   className = "",
   onClose = () => {},
 }) {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     if (searchParams.get("q")) {
       setSearchValue(searchParams.get("q").split("+").join(" "));
+    } else {
+      setSearchValue("");
     }
-  }, []);
+  }, [pathname]);
 
   const onChange = (e) => {
     setSearchValue(e.target.value);
   };
 
   const onSearch = () => {
+    let currentPathname = pathname;
+
+    if (pathname === "/" || pathname.includes("branch")) {
+      currentPathname = "/search-result";
+    }
     navigate({
-      pathname: pathname,
+      pathname: currentPathname,
       search: createSearchParams({
         ...Object.fromEntries([...searchParams]),
         q: searchValue.trim().replace(/\s+/g, " ").split(" ").join("+"),

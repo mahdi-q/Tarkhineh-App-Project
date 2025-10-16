@@ -64,11 +64,7 @@ function ChalosLayout() {
       <Header slides={slides} />
 
       <div className="lg:hidden">
-        <SearchBar
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-          pathname="search-result"
-        />
+        <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
 
       <CardsSlider title="پیشنهاد ویژه" cards={chalosBranch.special_foods} />

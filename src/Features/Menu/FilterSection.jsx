@@ -83,7 +83,6 @@ function FilterSection({ filters }) {
         <SearchBar
           searchValue={searchValue}
           setSearchValue={setSearchValue}
-          pathname={pathname}
           className="!mx-0 !mt-0 w-full max-w-lg"
         />
       </div>
